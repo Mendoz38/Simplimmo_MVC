@@ -1,0 +1,69 @@
+#### Simpl'Immo ###
+services:
+  mysql_service_MVC:
+    image: mysql:8.0
+    container_name: simplimmo_mysql_MVC
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "--password=$${MYSQL_ROOT_PASSWORD}", "--silent"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_LOG_BIN: mysql-bin
+    ports:
+      - "3308:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./data/conf:/etc/mysql/conf.d
+      - ./data/logs:/logs
+    networks:
+      - simplon_network
+
+  phpmyadmin_service_MVC:
+    image: phpmyadmin/phpmyadmin
+    container_name: simplimmo_phpadmin_MVC
+    depends_on:
+      - mysql_service_MVC
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql_service_MVC
+      APACHE_SERVER_NAME: mysql_service_MVC
+    ports:
+      - 8081:80
+    volumes:
+      - ./data/conf/custom-phpmyadmin.conf:/etc/apache2/conf-enabled/custom-phpmyadmin.conf
+    networks:
+      - simplon_network
+
+  simplimmo_front_MVC:
+    image: "simplimmo_mvc"
+    container_name: simplimmo_front_MVC
+    build:
+      context: ./simplimmo
+    depends_on:
+      - mysql_service_MVC
+    restart: always
+    environment:
+      MYSQL_HOST_IP: mysql_service_MVC
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - '3002:80'
+    volumes:
+      - ./simplimmo:/var/www/html
+      - ./apache/demo.apache.conf:/etc/apache2/sites-enabled/demo.conf
+    networks:
+      - simplon_network
+
+volumes:
+  mysql_service_MVC:
+    driver: local
+
+networks:
+  simplon_network:
+    external: true
