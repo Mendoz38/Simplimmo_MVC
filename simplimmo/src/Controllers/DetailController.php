@@ -6,12 +6,13 @@ class DetailController
 {
     use Response;
 
-    public function index()
+    public function index($id)
     {
         $title = "Détail Annonce ";
 
         $viewData = [
-			'title' => $title
+			'title' => $title,
+            'id' => $id
         ];
 
         $this->render('DetailTemplate', $viewData);

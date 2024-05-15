@@ -35,7 +35,7 @@ switch ($route) {
         $annoncesController->index();
         break;
     case URL_DETAIL:
-        $detailController->index();
+        $detailController->index($id);
         break;
     case URL_CONTACT:
         $contactController->index();

@@ -5,13 +5,11 @@ include('__includes/01_head.php');
 include('__includes/02_nav.php'); 
 
 ?>
-
-
         <div class="page-head"> 
             <div class="container">
                 <div class="row">
                     <div class="page-head-content">
-                        <h1 class="page-title">List Layout With Sidebar</h1>               
+                        <h1 class="page-title">Liste des annonces</h1>               
                     </div>
                 </div>
             </div>
@@ -28,17 +26,17 @@ include('__includes/02_nav.php');
                                 <ul class="sort-by-list">
                                     <li class="active">
                                         <a href="javascript:void(0);" class="order_by_date" data-orderby="property_date" data-order="ASC">
-                                            Property Date <i class="fa fa-sort-amount-asc"></i>					
+                                        Date de la propriété <i class="fa fa-sort-amount-asc"></i>					
                                         </a>
                                     </li>
                                     <li class="">
                                         <a href="javascript:void(0);" class="order_by_price" data-orderby="property_price" data-order="DESC">
-                                            Property Price <i class="fa fa-sort-numeric-desc"></i>						
+                                        Prix de la propriété <i class="fa fa-sort-numeric-desc"></i>						
                                         </a>
                                     </li>
                                 </ul><!--/ .sort-by-list-->
                                 <div class="items-per-page">
-                                    <label for="items_per_page"><b>Property per page :</b></label>
+                                    <label for="items_per_page"><b>Propriétés par page :</b></label>
                                     <div class="sel">
                                         <select id="items_per_page" name="per_page">
                                             <option value="3">3</option>
@@ -65,19 +63,19 @@ include('__includes/02_nav.php');
                                 <div class="col-sm-6 col-md-4 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-3.jpg"></a>
+                                            <a href="Detail" ><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-3.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <h5><a href="Detail"> Superbe villa </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="pull-left"><b> Surface :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
                                             <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
                                             <div class="property-icon">
-                                                <img src="assets/img/icon/bed.png">(5)|
-                                                <img src="assets/img/icon/shawer.png">(2)|
-                                                <img src="assets/img/icon/cars.png">(1)  
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png">(5)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png">(2)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png">(1)  
                                             </div>
                                         </div>
 
@@ -88,40 +86,19 @@ include('__includes/02_nav.php');
                                 <div class="col-sm-6 col-md-4 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-2.jpg"></a>
+                                            <a href="Detail" ><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-2.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <h5><a href="Detail"> Superbe villa </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="pull-left"><b> Surface :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
                                             <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
                                             <div class="property-icon">
-                                                <img src="assets/img/icon/bed.png">(5)|
-                                                <img src="assets/img/icon/shawer.png">(2)|
-                                                <img src="assets/img/icon/cars.png">(1)  
-                                            </div>
-                                        </div> 
-                                    </div>
-                                </div> 
-
-                                <div class="col-sm-6 col-md-4 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-1.jpg"></a>
-                                        </div>
-
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
-                                            <span class="proerty-price pull-right"> $ 300,000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="assets/img/icon/bed.png">(5)|
-                                                <img src="assets/img/icon/shawer.png">(2)|
-                                                <img src="assets/img/icon/cars.png">(1)  
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png">(5)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png">(2)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png">(1)  
                                             </div>
                                         </div> 
                                     </div>
@@ -130,19 +107,19 @@ include('__includes/02_nav.php');
                                 <div class="col-sm-6 col-md-4 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-3.jpg"></a>
+                                            <a href="Detail" ><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-1.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <h5><a href="Detail"> Superbe villa </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="pull-left"><b> Surface :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
                                             <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
                                             <div class="property-icon">
-                                                <img src="assets/img/icon/bed.png">(5)|
-                                                <img src="assets/img/icon/shawer.png">(2)|
-                                                <img src="assets/img/icon/cars.png">(1)  
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png">(5)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png">(2)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png">(1)  
                                             </div>
                                         </div> 
                                     </div>
@@ -151,41 +128,19 @@ include('__includes/02_nav.php');
                                 <div class="col-sm-6 col-md-4 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-1.jpg"></a>
+                                            <a href="Detail" ><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-3.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <h5><a href="Detail"> Superbe villa </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="pull-left"><b> Surface :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
                                             <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
                                             <div class="property-icon">
-                                                <img src="assets/img/icon/bed.png">(5)|
-                                                <img src="assets/img/icon/shawer.png">(2)|
-                                                <img src="assets/img/icon/cars.png">(1)  
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div> 
-
-                                <div class="col-sm-6 col-md-4 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-2.jpg"></a>
-                                        </div>
-
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
-                                            <span class="proerty-price pull-right"> $ 300,000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="assets/img/icon/bed.png">(5)|
-                                                <img src="assets/img/icon/shawer.png">(2)|
-                                                <img src="assets/img/icon/cars.png">(1)  
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png">(5)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png">(2)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png">(1)  
                                             </div>
                                         </div> 
                                     </div>
@@ -194,19 +149,41 @@ include('__includes/02_nav.php');
                                 <div class="col-sm-6 col-md-4 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-3.jpg"></a>
+                                            <a href="Detail" ><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-1.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <h5><a href="Detail"> Superbe villa </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="pull-left"><b> Surface :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
                                             <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
                                             <div class="property-icon">
-                                                <img src="assets/img/icon/bed.png">(5)|
-                                                <img src="assets/img/icon/shawer.png">(2)|
-                                                <img src="assets/img/icon/cars.png">(1)  
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png">(5)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png">(2)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div> 
+
+                                <div class="col-sm-6 col-md-4 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="Detail" ><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-2.jpg"></a>
+                                        </div>
+
+                                        <div class="item-entry overflow">
+                                            <h5><a href="Detail"> Superbe villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Surface :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png">(5)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png">(2)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png">(1)  
                                             </div>
                                         </div> 
                                     </div>
@@ -215,19 +192,19 @@ include('__includes/02_nav.php');
                                 <div class="col-sm-6 col-md-4 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-2.jpg"></a>
+                                            <a href="Detail" ><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-3.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <h5><a href="Detail"> Superbe villa </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="pull-left"><b> Surface :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
                                             <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
                                             <div class="property-icon">
-                                                <img src="assets/img/icon/bed.png">(5)|
-                                                <img src="assets/img/icon/shawer.png">(2)|
-                                                <img src="assets/img/icon/cars.png">(1)  
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png">(5)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png">(2)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png">(1)  
                                             </div>
                                         </div> 
                                     </div>
@@ -236,19 +213,40 @@ include('__includes/02_nav.php');
                                 <div class="col-sm-6 col-md-4 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-1.jpg"></a>
+                                            <a href="Detail" ><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-2.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <h5><a href="Detail"> Superbe villa </a></h5>
                                             <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="pull-left"><b> Surface :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
                                             <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
                                             <div class="property-icon">
-                                                <img src="assets/img/icon/bed.png">(5)|
-                                                <img src="assets/img/icon/shawer.png">(2)|
-                                                <img src="assets/img/icon/cars.png">(1)  
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png">(5)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png">(2)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png">(1)  
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div> 
+
+                                <div class="col-sm-6 col-md-4 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="Detail" ><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-1.jpg"></a>
+                                        </div>
+
+                                        <div class="item-entry overflow">
+                                            <h5><a href="Detail"> Superbe villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Surface :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png">(5)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png">(2)|
+                                                <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png">(1)  
                                             </div>
                                         </div> 
                                     </div>
@@ -274,7 +272,7 @@ include('__includes/02_nav.php');
                         <div class="blog-asside-right pl0">
                             <div class="panel panel-default sidebar-menu wow fadeInRight animated" >
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Smart search</h3>
+                                    <h3 class="panel-title"> Recherche Avancé </h3>
                                 </div>
                                 <div class="panel-body search-widget">
                                     <form action="" class=" form-inline"> 
@@ -303,10 +301,10 @@ include('__includes/02_nav.php');
                                                 <div class="col-xs-6">
 
                                                     <select id="basic" class="selectpicker show-tick form-control">
-                                                        <option> -Status- </option>
-                                                        <option>Rent </option>
-                                                        <option>Boy</option>
-                                                        <option>used</option>  
+                                                        <option> -Statut- </option>
+                                                        <option>Location</option>
+                                                        <option>Achat</option>
+                                                        <option>Occasion</option>  
 
                                                     </select>
                                                 </div>
@@ -316,7 +314,7 @@ include('__includes/02_nav.php');
                                         <fieldset class="padding-5">
                                             <div class="row">
                                                 <div class="col-xs-6">
-                                                    <label for="price-range">Price range ($):</label>
+                                                    <label for="price-range"> Fourchette de prixe ($):</label>
                                                     <input type="text" class="span2" value="" data-slider-min="0" 
                                                            data-slider-max="600" data-slider-step="5" 
                                                            data-slider-value="[0,450]" id="price-range" ><br />
@@ -324,7 +322,7 @@ include('__includes/02_nav.php');
                                                     <b class="pull-right color">100000$</b>                                                
                                                 </div>
                                                 <div class="col-xs-6">
-                                                    <label for="property-geo">Property geo (m2) :</label>
+                                                    <label for="property-geo"> Localisation de la propriété (m2) :</label>
                                                     <input type="text" class="span2" value="" data-slider-min="0" 
                                                            data-slider-max="600" data-slider-step="5" 
                                                            data-slider-value="[50,450]" id="property-geo" ><br />
@@ -337,7 +335,7 @@ include('__includes/02_nav.php');
                                         <fieldset class="padding-5">
                                             <div class="row">
                                                 <div class="col-xs-6">
-                                                    <label for="price-range">Min baths :</label>
+                                                    <label for="price-range">Nombre minimum de salles de bains :</label>
                                                     <input type="text" class="span2" value="" data-slider-min="0" 
                                                            data-slider-max="600" data-slider-step="5" 
                                                            data-slider-value="[250,450]" id="min-baths" ><br />
@@ -346,7 +344,7 @@ include('__includes/02_nav.php');
                                                 </div>
 
                                                 <div class="col-xs-6">
-                                                    <label for="property-geo">Min bed :</label>
+                                                    <label for="property-geo">Nombre minimum de chambres :</label>
                                                     <input type="text" class="span2" value="" data-slider-min="0" 
                                                            data-slider-max="600" data-slider-step="5" 
                                                            data-slider-value="[250,450]" id="min-bed" ><br />
@@ -361,13 +359,13 @@ include('__includes/02_nav.php');
                                             <div class="row">
                                                 <div class="col-xs-6">
                                                     <div class="checkbox">
-                                                        <label> <input type="checkbox" checked> Fire Place</label>
+                                                        <label> <input type="checkbox" checked> Cheminée</label>
                                                     </div> 
                                                 </div>
 
                                                 <div class="col-xs-6">
                                                     <div class="checkbox">
-                                                        <label> <input type="checkbox"> Dual Sinks</label>
+                                                        <label> <input type="checkbox"> Double lavabo </label>
                                                     </div>
                                                 </div>                                            
                                             </div>
@@ -377,27 +375,12 @@ include('__includes/02_nav.php');
                                             <div class="row">
                                                 <div class="col-xs-6"> 
                                                     <div class="checkbox">
-                                                        <label> <input type="checkbox" checked> Swimming Pool</label>
+                                                        <label> <input type="checkbox" checked> Piscine</label>
                                                     </div>
                                                 </div>  
                                                 <div class="col-xs-6"> 
                                                     <div class="checkbox">
-                                                        <label> <input type="checkbox" checked> 2 Stories </label>
-                                                    </div>
-                                                </div>  
-                                            </div>
-                                        </fieldset>
-
-                                        <fieldset class="padding-5">
-                                            <div class="row">
-                                                <div class="col-xs-6"> 
-                                                    <div class="checkbox">
-                                                        <label><input type="checkbox"> Laundry Room </label>
-                                                    </div>
-                                                </div>  
-                                                <div class="col-xs-6"> 
-                                                    <div class="checkbox">
-                                                        <label> <input type="checkbox"> Emergency Exit</label>
+                                                        <label> <input type="checkbox" checked> 2 étages </label>
                                                     </div>
                                                 </div>  
                                             </div>
@@ -407,12 +390,27 @@ include('__includes/02_nav.php');
                                             <div class="row">
                                                 <div class="col-xs-6"> 
                                                     <div class="checkbox">
-                                                        <label>  <input type="checkbox" checked> Jog Path </label>
+                                                        <label><input type="checkbox"> Buanderie </label>
                                                     </div>
                                                 </div>  
                                                 <div class="col-xs-6"> 
                                                     <div class="checkbox">
-                                                        <label>  <input type="checkbox"> 26' Ceilings </label>
+                                                        <label> <input type="checkbox"> Issue de secours</label>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </fieldset>
+
+                                        <fieldset class="padding-5">
+                                            <div class="row">
+                                                <div class="col-xs-6"> 
+                                                    <div class="checkbox">
+                                                        <label>  <input type="checkbox" checked> Sentier de jogging </label>
+                                                    </div>
+                                                </div>  
+                                                <div class="col-xs-6"> 
+                                                    <div class="checkbox">
+                                                        <label>  <input type="checkbox"> Plafonds de 26 pieds </label>
                                                     </div>
                                                 </div>  
                                             </div>
@@ -422,7 +420,7 @@ include('__includes/02_nav.php');
                                             <div class="row">
                                                 <div class="col-xs-12"> 
                                                     <div class="checkbox">
-                                                        <label>  <input type="checkbox"> Hurricane Shutters </label>
+                                                        <label>  <input type="checkbox"> Volets pare-tempête </label>
                                                     </div>
                                                 </div>  
                                             </div>
@@ -441,60 +439,60 @@ include('__includes/02_nav.php');
 
                             <div class="panel panel-default sidebar-menu wow fadeInRight animated">
                                 <div class="panel-heading">
-                                    <h3 class="panel-title">Recommended</h3>
+                                    <h3 class="panel-title">Recommandé</h3>
                                 </div>
                                 <div class="panel-body recent-property-widget">
                                     <ul>
                                         <li>
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-2.jpg"></a>
+                                                <a href="single.html"><img src="<?= BASE_ASSETS; ?>/assets/img/demo/small-property-2.jpg"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
                                                 </span>
                                             </div>
                                             <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">Super nice villa </a></h6>
+                                                <h6> <a href="single.html">Superbe villa </a></h6>
                                                 <span class="property-price">3000000$</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="col-md-3 col-sm-3  col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-1.jpg"></a>
+                                                <a href="single.html"><img src="<?= BASE_ASSETS; ?>/assets/img/demo/small-property-1.jpg"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
                                                 </span>
                                             </div>
                                             <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">Super nice villa </a></h6>
+                                                <h6> <a href="single.html">Superbe villa </a></h6>
                                                 <span class="property-price">3000000$</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-3.jpg"></a>
+                                                <a href="single.html"><img src="<?= BASE_ASSETS; ?>/assets/img/demo/small-property-3.jpg"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
                                                 </span>
                                             </div>
                                             <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">Super nice villa </a></h6>
+                                                <h6> <a href="single.html">Superbe villa </a></h6>
                                                 <span class="property-price">3000000$</span>
                                             </div>
                                         </li>
 
                                         <li>
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-2.jpg"></a>
+                                                <a href="single.html"><img src="<?= BASE_ASSETS; ?>/assets/img/demo/small-property-2.jpg"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
                                                 </span>
                                             </div>
                                             <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">Super nice villa </a></h6>
+                                                <h6> <a href="single.html">Superbe villa</a></h6>
                                                 <span class="property-price">3000000$</span>
                                             </div>
                                         </li>

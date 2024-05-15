@@ -1,12 +1,33 @@
-.success {
+.success, .error {
     width: 100%;
     border-radius:5px;
-    background-color: lightgreen;
     text-align: center;
     font-size: 2em;
-    padding: 20px;
+    padding: 10px;
+    margin-bottom: 5px;
+} 
+
+.success {
+    background-color: #D8E68E;
+    border-color: #aec62c;
+    color: #53555c;
+}
+.error {
+    background-color: #ED7D57;
+    border-color: #c52a2a;
+    color: #fff;
 }
 
 .center {
     text-align:center;
+}
+
+.icheckbox_square-yellow input {
+    width: 100% !important;
+    opacity: 100 !important;
+}
+
+.icheckbox_square-yellow ins {
+    display: none !important;
+    opacity: 100 !important;
 }

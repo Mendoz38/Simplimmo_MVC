@@ -18,19 +18,22 @@ include('__includes/02_nav.php');
 <!-- register-area -->
 <div class="register-area">
     <div class="container">
-        <h2><?= $count ; ?>  users</h2>
-        <?php /*
-                    $formController = new Register_controller();
-                        */
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-           // $formController->processForm();
-        } else {
-        ?>
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div class="box-for overflow">
-                    <div class="col-md-12 col-xs-12 register-blocks">
-                        <h2>Créer un compte : </h2>
+        <h2><?= $count; ?> users</h2>
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="box-for overflow">
+                <div class="col-md-12 col-xs-12 register-blocks">
+                    <h2>Créer un compte : </h2>
+                    <?php
+                    if (!empty($successMessage)) {
+                        echo '<div class="success"><h3 class="center">' . $successMessage . '</h3></div>';
+                    }
+                    if (!empty($errMessage)) {
+                        echo '<div class="error"><h4 class="center">' . $errMessage . '</h4></div>';
+                    }
+
+                    if (empty($successMessage)) {
+                    ?>
                         <form action="" method="post">
                             <div class="form-group">
                                 <label for="name">Nom</label>
@@ -48,14 +51,13 @@ include('__includes/02_nav.php');
                                 <button type="submit" class="btn btn-default">Créer le compte</button>
                             </div>
                         </form>
-                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
-            <div class="col-md-3"></div>
-        <?php
-
-        }
-        ?>
+        </div>
+        <div class="col-md-3"></div>
 
     </div>
 </div>

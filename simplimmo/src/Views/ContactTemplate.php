@@ -10,14 +10,14 @@ include('__includes/02_nav.php');
             <div class="container">
                 <div class="row">
                     <div class="page-head-content">
-                        <h1 class="page-title">Contact page</h1>               
+                        <h1 class="page-title">Page de contact</h1>               
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End page header -->
+        <!-- Fin de l'entête de la page -->
 
-        <!-- property area -->
+        <!-- Zone de propriété -->
         <div class="content-area recent-property padding-top-40" style="background-color: #FFF;">
             <div class="container">  
                 <div class="row">
@@ -25,29 +25,29 @@ include('__includes/02_nav.php');
                         <div class="" id="contact1">                        
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <h3><i class="fa fa-map-marker"></i> Address</h3>
+                                    <h3><i class="fa fa-map-marker"></i> Adresse</h3>
                                     <p>13/25 shibuia
                                         <br>Tokyo 
                                         <br>45Y 73J 
                                         <br>
-                                        <strong>Japan</strong>
+                                        <strong>Japon</strong>
                                     </p>
                                 </div>
                                 <!-- /.col-sm-4 -->
                                 <div class="col-sm-4">
-                                    <h3><i class="fa fa-phone"></i> Call center</h3>
-                                    <p class="text-muted">This number is toll free if calling from
-                                        Great Britain otherwise we advise you to use the electronic
-                                        form of communication.</p>
+                                    <h3><i class="fa fa-phone"></i> Centre d'appels</h3>
+                                    <p class="text-muted">Ce numéro est gratuit si vous appelez depuis
+                                        la Grande-Bretagne, sinon nous vous conseillons d'utiliser le
+                                        formulaire de communication électronique.</p>
                                     <p><strong>+33 555 444 333</strong></p>
                                 </div>
                                 <!-- /.col-sm-4 -->
                                 <div class="col-sm-4">
-                                    <h3><i class="fa fa-envelope"></i> Electronic support</h3>
-                                    <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
+                                    <h3><i class="fa fa-envelope"></i> Support électronique</h3>
+                                    <p class="text-muted">N'hésitez pas à nous envoyer un email ou à utiliser notre système de support par ticket électronique.</p>
                                     <ul>
                                         <li><strong><a href="mailto:">info@company.com</a></strong>   </li>
-                                        <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
+                                        <li><strong><a href="#">Ticketio</a></strong> - notre plateforme de support par ticket</li>
                                     </ul>
                                 </div>
                                 <!-- /.col-sm-4 -->
@@ -56,19 +56,19 @@ include('__includes/02_nav.php');
                             <hr>
                             
                             <hr>
-                            <h2>Contact form</h2>
+                            <h2>Formulaire de contact</h2>
                             <form>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="firstname">Firstname</label>
-                                            <input type="text" class="form-control" id="firstname">
+                                            <label for="firstname">Prénom</label>
+                                            <input type="text" class="form-control" id="prénom">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="lastname">Lastname</label>
-                                            <input type="text" class="form-control" id="lastname">
+                                            <label for="lastname">Nom de famille</label>
+                                            <input type="text" class="form-control" id="nom">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
@@ -79,8 +79,8 @@ include('__includes/02_nav.php');
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="subject">Subject</label>
-                                            <input type="text" class="form-control" id="subject">
+                                            <label for="subject">Sujet</label>
+                                            <input type="text" class="form-control" id="sujet">
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
@@ -90,7 +90,7 @@ include('__includes/02_nav.php');
                                         </div>
                                     </div>
                                     <div class="col-sm-12 text-center">
-                                        <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send message</button>
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Envoyer le message</button>
                                     </div>
                                 </div>
                                 <!-- /.row -->

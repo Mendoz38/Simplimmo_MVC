@@ -8,21 +8,50 @@ class RegisterController
 
     public function index()
     {
-        
         $registerRepository = new RegisterRepository();
-        $formData = $_POST;
-
-        //echo "<br />Mail: " . $formData['mail'] . "<br>";
-
         $count = $registerRepository->countUser();
-//        $addUser = $registerRepository->addUser($userData);
 
+        $successMessage = '';
+        $errMessage = '';
 
-        $title = "Register!";
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $name = $_POST['name'];
+            $surname = $_POST['surname'] ?? '';
+            $phone = $_POST['phone'] ?? '';
+            $mail = $_POST['mail'];
+            $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+            $token = bin2hex(random_bytes(16));
+            $status = 1; // A gèrer par la suite
+            $date_create = date('Y-m-d H:i:s');
+            $date_modif = null;
 
+            $registerData = [
+                'name' => $name,
+                'surname' => $surname,
+                'phone' => $phone,
+                'mail' => $mail,
+                'password' => $password,
+                'token' => $token,
+                'status' => $status,
+                'date_create' => $date_create,
+                'date_modif' => $date_modif
+            ];
+
+            if ($registerRepository->checkEmailExists($mail)) {
+                $errMessage = "Cet email existe déjà.";
+            } else {
+                if ($registerRepository->addUser($registerData)) {
+                    $successMessage = 'Le compte a été créé avec succès.';
+                } else {
+                    $errMessage = 'Une erreur est survenue lors de la création du compte.';
+                }
+            }
+            
+        }
         $viewData = [
             'count' => $count,
-			'title' => $title
+            'successMessage' => $successMessage,
+            'errMessage' => $errMessage
         ];
 
         $this->render('RegisterTemplate', $viewData);
@@ -34,22 +63,3 @@ class RegisterController
     }
 
 }
-/*
-        $registerRepository = new RegisterRepository();
-        $registerData = $_POST;
-
-        echo "<br />Mail: " . $registerData['mail'] . "<br>";
-
-        // Hasher le mot de passe
-        $registerData['password'] = md5($registerData['password']);
-
-        // Vérifier si l'email existe déjà
-        if ($registerRepository->checkEmailExists($registerData['mail'])) {
-            echo "Cet email est déjà utilisé. Veuillez choisir un autre.";
-            $formController = new RegisterRepository();
-            $this->render('RegisterTemplate', $viewData);
-            return;
-        } else {
-            $addUser = $registerRepository->addUser($registerData);
-        }
-*/

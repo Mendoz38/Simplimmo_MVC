@@ -13,7 +13,6 @@ class RegisterRepository extends Database
 
             return $count > 0; 
         } catch (PDOException $e) {
-            echo "L'email existe déjà";
             return false;
         }
     }
@@ -34,9 +33,10 @@ class RegisterRepository extends Database
             $stmt->bindParam(':date_modif', $registerData['date_modif']);
 
             $stmt->execute();
+            echo "Utilisateur ajouté avec succès<br>";
             return true;
         } catch (PDOException $e) {
-            // A faire, gérer l'erreur d'insertion
+            echo "Erreur lors de l'ajout de l'utilisateur : " . $e->getMessage() . "<br>";
             return false;
         }
     }

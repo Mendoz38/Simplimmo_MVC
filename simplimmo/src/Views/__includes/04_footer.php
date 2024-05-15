@@ -22,16 +22,16 @@
 
 
 
-<script src="<?= BASE_ASSETS; ?>/assets/js/jquery-1.10.2.min.js"></script>
-<script src="<?= BASE_ASSETS; ?>/assets/js/bootstrap.min.js"></script>
-<script src="<?= BASE_ASSETS; ?>/assets/js/bootstrap-select.min.js"></script>
-<script src="<?= BASE_ASSETS; ?>/assets/js/bootstrap-hover-dropdown.js"></script>
-<script src="<?= BASE_ASSETS; ?>/assets/js/owl.carousel.min.js"></script>
-<script src="<?= BASE_ASSETS; ?>/assets/js/wow.js"></script>
-<script src="<?= BASE_ASSETS; ?>/assets/js/icheck.min.js"></script>
-<script src="<?= BASE_ASSETS; ?>/assets/js/price-range.js"></script>
-<script src="<?= BASE_ASSETS; ?>/assets/js/lightslider.min.js" type="text/javascript"></script>
-<script src="<?= BASE_ASSETS; ?>/assets/js/main.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/jquery-1.10.2.min.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/bootstrap.min.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/bootstrap-select.min.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/bootstrap-hover-dropdown.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/owl.carousel.min.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/wow.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/icheck.min.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/price-range.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/lightslider.min.js" type="text/javascript"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/main.js"></script>
 
 <script>
     $(document).ready(function() {
