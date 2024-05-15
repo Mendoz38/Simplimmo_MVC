@@ -6,14 +6,14 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi deserunt deleniti, ullam commodi sit ipsam laboriosam velit adipisci quibusdam aliquam tenetur!</p>
             <div class="search-form wow pulse" data-wow-delay="0.8s">
 
-                <form action="" class=" form-inline">
+                <form action="" method="post" class=" form-inline">
                     <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button>
 
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Mot-clé">
                     </div>
                     <div class="form-group">
-                        <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Sélectionnez votre ville">
+                        <select id="lunchBegins" name="lieu"  class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Sélectionnez votre ville">
 
                             <option>New york, CA</option>
                             <option>Paris</option>
@@ -24,7 +24,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <select id="basic" class="selectpicker show-tick form-control">
+                        <select id="basic" name="type" class="selectpicker show-tick form-control">
                             <option> -Maison / Appartement- </option>
                             <option>Maison</option>
                             <option>Appartement</option>

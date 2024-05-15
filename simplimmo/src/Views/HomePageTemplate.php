@@ -11,7 +11,12 @@ include('__includes/03_slider.php');
 <div class="container">
     <div class="row">
         <h3 class="center">Il y a actuellement <?= $count ?> offres disponibles</h3>
-        <div class="col-md-12  padding-top-40 properties-page">
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+echo "Vous avez recherché :". $_POST['type'] . " à " .$_POST['lieu'];
+}
+?> 
+       <div class="col-md-12  padding-top-40 properties-page">
             <div class="col-md-12 ">
                 <?php include('__includes/annonces/filter.php'); ?>
                 <div class="col-md-12 ">
