@@ -21,3 +21,4 @@ define("URL_DETAIL", BASE_URL . "/Detail");
 define("URL_CONTACT", BASE_URL . "/Contact");
 define("URL_SUCCESS", BASE_URL . "/Success");
 define("URL_ADMIN", BASE_URL . "/Admin");
+define("URL_ADDANNONCE", BASE_URL . "/AddAnnonce");
