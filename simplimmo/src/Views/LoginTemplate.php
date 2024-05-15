@@ -19,11 +19,8 @@ include('__includes/02_nav.php');
 <div class="register-area" style="background-color: rgb(249, 249, 249);">
     <div class="container">
         <?php
-        $formController = new LoginController();
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {  
-            $loginController->processForm();
-            $loginController->showForm();
         } else {
         ?>
             <div class="col-md-3"></div>
@@ -33,12 +30,12 @@ include('__includes/02_nav.php');
                         <h2>Se connecter : </h2>
                         <form action="" method="post">
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email">
+                                <label for="mail">Email</label>
+                                <input type="text" class="form-control" id="email" name="mail">
                             </div>
                             <div class="form-group">
                                 <label for="password">Mot de passe</label>
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" id="password" name="password">
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-default"> Se connecter</button>

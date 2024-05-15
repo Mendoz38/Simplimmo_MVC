@@ -37,15 +37,15 @@ include('__includes/02_nav.php');
                         <form action="" method="post">
                             <div class="form-group">
                                 <label for="name">Nom</label>
-                                <input type="text" class="form-control" id="name" name="name" required value="Nom">
+                                <input type="text" class="form-control" id="name" name="name" required >
                             </div>
                             <div class="form-group">
                                 <label for="mail">Email</label>
-                                <input type="text" class="form-control" id="mail" name="mail" required value="ced@ced.fr">
+                                <input type="text" class="form-control" id="mail" name="mail" required >
                             </div>
                             <div class="form-group">
                                 <label for="password">Mot de passe</label>
-                                <input type="password" class="form-control" id="password" name="password" required value="123456">
+                                <input type="password" class="form-control" id="password" name="password" required >
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-default">Créer le compte</button>

@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../Services/Response.php';
+require_once __DIR__ . '/../Repositories/UserRepository.php';
 
 class RegisterController
 {
@@ -9,6 +10,7 @@ class RegisterController
     public function index()
     {
         $registerRepository = new RegisterRepository();
+        $userRepository = new UserRepository();
         $count = $registerRepository->countUser();
 
         $successMessage = '';
@@ -20,7 +22,7 @@ class RegisterController
             $phone = $_POST['phone'] ?? '';
             $mail = $_POST['mail'];
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-            $token = bin2hex(random_bytes(16));
+            $token = ""; // A gèrer par la suite
             $status = 1; // A gèrer par la suite
             $date_create = date('Y-m-d H:i:s');
             $date_modif = null;
@@ -37,7 +39,7 @@ class RegisterController
                 'date_modif' => $date_modif
             ];
 
-            if ($registerRepository->checkEmailExists($mail)) {
+            if ($userRepository->checkEmailExists($mail)) {
                 $errMessage = "Cet email existe déjà.";
             } else {
                 if ($registerRepository->addUser($registerData)) {
