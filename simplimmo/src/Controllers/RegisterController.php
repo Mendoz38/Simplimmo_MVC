@@ -50,6 +50,7 @@ class RegisterController
             }
             
         }
+        
         $viewData = [
             'count' => $count,
             'successMessage' => $successMessage,

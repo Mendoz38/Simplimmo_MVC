@@ -3,12 +3,10 @@
 require_once __DIR__ . '/../Services/Response.php';
 require_once __DIR__ . '/../Repositories/UserRepository.php';
 
-class LoginController
-{
+class LoginController {
     use Response;
 
-    public function index()
-    {
+    public function index()  {
         $loginRepository = new LoginRepository();
         $userRepository = new UserRepository();
 
@@ -21,21 +19,20 @@ class LoginController
 
             if ($userRepository->checkEmailExists($mail)) {
                 $hashedPassword = $userRepository->checkPassword($mail);
-                
-                echo  "<br />password1".$password;
-               // echo  "<br />password2".$hashedPassword;
 
                 if (password_verify($password, $hashedPassword)) {
-                    echo 'Le mot de passe est valide !';
+                    $successMessage =  'Vous êtes maintenant connecté !'; 
+                    
+                    $_SESSION['user_email'] = $mail; 
+                    $_SESSION['loggedin'] = true;
                 } else {
-                    echo 'Le mot de passe est invalide.';
+                    $errMessage =  'Le mot de passe est invalide.';
                 }
 
             } else {
-                echo'Utilisateur non trouvé';
+                $errMessage =  'Utilisateur non connu';
             }
         }
-
 
         $title = "Login!";
 
@@ -48,9 +45,4 @@ class LoginController
         $this->render('LoginTemplate', $viewData);
     }
     
-    public function pageNotFound()
-    {
-        $this->render('404');
-    }
-
 }
