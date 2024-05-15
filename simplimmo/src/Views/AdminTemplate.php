@@ -40,17 +40,14 @@ include('__includes/02_nav.php');
                         <td><a href="Edit/<?= $annonce->getId() ; ?>"><i class="fa fa-edit"></i></a> </td>
                         <td><?= $annonce->getId() ; ?></td>
                         <td><?= $annonce->getTitle() ; ?></td>
-                        <td><?= $annonce->getSurface() ; ?></td>
-                        <td><?= $annonce->getPrice() ; ?></td>
+                        <td><?= $annonce->getSurface() ; ?> m²</td>
+                        <td><?= $annonce->getPrice() ; ?> €</td>
                         <td><?= $annonce->getRooms() ; ?></td>
                         <td><i class="fa fa-trash"></i> </td>
                     </tr>
                     <?php endforeach; ?>
             </tbody>
             </table>
-
-
-
 
     </div>
 
