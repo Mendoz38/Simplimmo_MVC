@@ -1,6 +1,5 @@
 <?php
 // 1er MVCR appelé
-echo "1- Controller<br />";
 require_once __DIR__ . '/../Services/Response.php';
 class HomeController
 {

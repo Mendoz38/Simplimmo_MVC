@@ -1,6 +1,5 @@
 <?php
 // 2eme MVCR appelé
-echo "2- Repository<br />";
 
 class HomeRepository extends Database
 {

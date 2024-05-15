@@ -1,6 +1,5 @@
 <?php
 // 3eme MVCR appelé
-echo "3- Model";
 
 class Home {
 
