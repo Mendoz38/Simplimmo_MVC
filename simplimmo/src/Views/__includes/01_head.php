@@ -31,6 +31,7 @@ ini_set('display_errors', 1);
     <link rel="stylesheet" href="<?= BASE_ASSETS; ?>/assets/css/owl.theme.css">
     <link rel="stylesheet" href="<?= BASE_ASSETS; ?>/assets/css/owl.transitions.css">
     <link rel="stylesheet" href="<?= BASE_ASSETS; ?>/assets/css/lightslider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/css/theme.bootstrap_4.min.css">
     <link rel="stylesheet" href="<?= BASE_ASSETS; ?>/assets/css/style.css">
     <link rel="stylesheet" href="<?= BASE_ASSETS; ?>/assets/css/responsive.css">
     <link rel="stylesheet" href="<?= BASE_ASSETS; ?>/assets/css/perso.css">

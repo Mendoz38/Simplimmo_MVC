@@ -31,3 +31,12 @@
     display: none !important;
     opacity: 100 !important;
 }
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+button > a {
+    color: #fff ;
+}

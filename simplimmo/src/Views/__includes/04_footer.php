@@ -33,6 +33,10 @@
 <script src="<?= BASE_ASSETS; ?>assets/js/lightslider.min.js" type="text/javascript"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/main.js"></script>
 
+<script src="<?= BASE_ASSETS; ?>assets/js/jquery.tablesorter.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/jquery.tablesorter.widgets.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/jquery.tablesorter.config.js"></script>
+
 <script>
     $(document).ready(function() {
 
