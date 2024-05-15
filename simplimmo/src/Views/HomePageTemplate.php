@@ -23,7 +23,7 @@ include('__includes/03_slider.php');
                             <div class="col-sm-6 col-md-3 p0">
                                 <div class="box-two proerty-item">
                                     <div class="item-thumb">
-                                        <a href="detail.php?id=<?= $annonce->getId() ; ?> "><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-<?= rand(1, 5); ?>.jpg"></a>
+                                        <a href="Detail/<?= $annonce->getId() ; ?> "><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-<?= rand(1, 5); ?>.jpg"></a>
                                     </div>
                                     <div class="item-entry overflow">
                                         <h5><a href="detail.php"> <?= $annonce->getTitle() ; ?>  </a></h5>
