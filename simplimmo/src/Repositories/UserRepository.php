@@ -28,6 +28,18 @@ class UserRepository extends Database {
             return false;
         }
     }
+
+    public function getAllUsers() {
+        try {
+            $req = $this->getDb()->query('SELECT * FROM users ');
+            $data = $req->fetchAll(PDO::FETCH_CLASS, User::class);
+            return $data;
+
+        } catch (PDOException $e) {
+            return false;
+        }        
+    }
+
 /*
     public function comparePassword($password, ) {
         if ($storedPassword && password_verify($password, $storedPassword)) {

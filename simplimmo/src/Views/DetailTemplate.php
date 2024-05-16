@@ -1,6 +1,6 @@
 
 <?php 
-
+echo "<br /> : DetailTemplate";
 include('__includes/01_head.php'); 
 include('__includes/02_nav.php'); 
 
@@ -10,7 +10,7 @@ include('__includes/02_nav.php');
             <div class="container">   
 
                 <div class="clearfix padding-top-40" >
-
+                    <h2>Annonce n° <?= $id ; ?></h2>
                     <div class="col-md-8 single-property-content prp-style-2">
                         <div class="">
                             <div class="row">

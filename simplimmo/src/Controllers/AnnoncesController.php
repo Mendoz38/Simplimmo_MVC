@@ -8,7 +8,7 @@ class AnnoncesController
 
     public function index()
     {
-        $title = "Contact";
+        $title = "Annonces";
 
         $viewData = [
 			'title' => $title

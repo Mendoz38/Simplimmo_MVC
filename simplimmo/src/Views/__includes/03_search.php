@@ -24,7 +24,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <select id="basic" class="selectpicker show-tick form-control">
+                        <select id="basic" class="selectpicker  form-control">
                             <option> -Maison / Appartement- </option>
                             <option>Maison</option>
                             <option>Appartement</option>
@@ -39,18 +39,18 @@
                         <div class="search-row">
 
                             <div class="form-group mar-r-20">
-                                <label for="price-range">Plage de prix ($):</label>
-                                <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[0,450]" id="price-range"><br />
-                                <b class="pull-left color">2000$</b>
-                                <b class="pull-right color">100000$</b>
+                                <label for="price-range">Plage de prix (€):</label>
+                                <input type="text" class="span2" value="" data-slider-min="2000" data-slider-max="100000" data-slider-step="1000" data-slider-value="[2000,100000]" id="price-range"><br />
+                                <b class="pull-left color">2000€</b>
+                                <b class="pull-right color">100000€</b>
                             </div>
                             <!-- End of  -->
 
                             <div class="form-group mar-l-20">
-                                <label for="property-geo">Superficie (m2) :</label>
-                                <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[50,450]" id="property-geo"><br />
-                                <b class="pull-left color">40m</b>
-                                <b class="pull-right color">12000m</b>
+                                <label for="property-geo">Superficie (m²) :</label>
+                                <input type="text" class="span2" value="" data-slider-min="40" data-slider-max="1200" data-slider-step="5" data-slider-value="[40,1200]" id="property-geo"><br />
+                                <b class="pull-left color">40m²</b>
+                                <b class="pull-right color">1200m²</b>
                             </div>
                             <!-- End of  -->
                         </div>
@@ -58,18 +58,18 @@
                         <div class="search-row">
 
                             <div class="form-group mar-r-20">
-                                <label for="price-range">Nombre de salles de bains minimum :</label>
-                                <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="min-baths"><br />
+                                <label for="price-range">Nombre de salles de bains :</label>
+                                <input type="text" class="span2" value="" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="[1,5]" id="min-baths"><br />
                                 <b class="pull-left color">1</b>
-                                <b class="pull-right color">120</b>
+                                <b class="pull-right color">5</b>
                             </div>
                             <!-- End of  -->
 
                             <div class="form-group mar-l-20">
-                                <label for="property-geo">Nombre de chambres minimum :</label>
-                                <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="min-bed"><br />
+                                <label for="property-geo">Nombre de chambres :</label>
+                                <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="[0,10]" id="min-bed"><br />
                                 <b class="pull-left color">1</b>
-                                <b class="pull-right color">120</b>
+                                <b class="pull-right color">10</b>
                             </div>
                             <!-- End of  -->
 

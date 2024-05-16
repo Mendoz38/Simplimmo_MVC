@@ -9,9 +9,9 @@
                 </div>
                 <div class="bottom-menu pull-right">
                     <ul>
-                        <li><a class="wow fadeInUp animated" href="Contact" data-wow-delay="0.2s">Contact</a></li>
-                        <li><a class="wow fadeInUp animated" href="Register" data-wow-delay="0.4s">Register</a></li>
-                        <li><a class="wow fadeInUp animated" href="Login" data-wow-delay="0.6s">Login</a></li>
+                        <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Contact" data-wow-delay="0.2s">Contact</a></li>
+                        <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Register" data-wow-delay="0.4s">Register</a></li>
+                        <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Login" data-wow-delay="0.6s">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -32,6 +32,9 @@
 <script src="<?= BASE_ASSETS; ?>assets/js/price-range.js"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/lightslider.min.js" type="text/javascript"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/main.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/jquery.bootstrap.wizard.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/jquery.validate.min.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/wizard.js"></script>
 
 <script src="<?= BASE_ASSETS; ?>assets/js/jquery.tablesorter.js"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/jquery.tablesorter.widgets.js"></script>

@@ -8,7 +8,7 @@ define("DATABASE_PASSWORD", "Simplon05/2024");
 
 // Routing environment variables
 define("BASE_URL", "/public");
-define("BASE_ASSETS", "../src/Views/");
+define("BASE_ASSETS", "/src/Views/");
 define("BASE_IMG", "../src/Views/");
 
 // Routing pages
@@ -22,3 +22,4 @@ define("URL_CONTACT", BASE_URL . "/Contact");
 define("URL_SUCCESS", BASE_URL . "/Success");
 define("URL_ADMIN", BASE_URL . "/Admin");
 define("URL_ADDANNONCE", BASE_URL . "/AddAnnonce");
+define("URL_EDIT_USER", BASE_URL . "/EditUser");

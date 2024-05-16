@@ -17,22 +17,22 @@ include('__includes/03_slider.php');
                 <div class="col-md-12 ">
                     <div id="list-type" class="proerty-th">
 
-                    
+
                         <?php foreach ($annonces as $annonce) : ?>
 
                             <div class="col-sm-6 col-md-3 p0">
                                 <div class="box-two proerty-item">
                                     <div class="item-thumb">
-                                        <a href="Detail/<?= $annonce->getId() ; ?> "><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-<?= rand(1, 5); ?>.jpg"></a>
+                                        <a href="Detail/<?= $annonce->getId(); ?> "><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-<?= rand(1, 5); ?>.jpg"></a>
                                     </div>
                                     <div class="item-entry overflow">
-                                        <h5><a href="detail.php"> <?= $annonce->getTitle() ; ?>  </a></h5>
+                                        <h5><a href="detail.php"> <?= $annonce->getTitle(); ?> </a></h5>
                                         <div class="dot-hr"></div>
-                                        <span class="pull-left"><b> Surface :</b> <?= $annonce->getSurface() ; ?>  m² </span>
-                                        <span class="proerty-price pull-right"> <?= $annonce->getPrice() ; ?>  €</span>
+                                        <span class="pull-left"><b> Surface :</b> <?= $annonce->getSurface(); ?> m² </span>
+                                        <span class="proerty-price pull-right"> <?= $annonce->getPrice(); ?> €</span>
                                         <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
                                         <div class="property-icon">
-                                            <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png"> (  <?= $annonce->getRooms() ; ?>  )|
+                                            <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png"> ( <?= $annonce->getRooms(); ?> )|
                                             <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png"> (2)|
                                             <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png"> (1)
                                         </div>
