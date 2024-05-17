@@ -6,7 +6,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi deserunt deleniti, ullam commodi sit ipsam laboriosam velit adipisci quibusdam aliquam tenetur!</p>
             <div class="search-form wow pulse" data-wow-delay="0.8s">
 
-                <form action="" class=" form-inline">
+                <form action="" method="post" class=" form-inline">
                     <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button>
 
                     <div class="form-group">

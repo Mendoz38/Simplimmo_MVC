@@ -10,6 +10,8 @@ require __DIR__ . "/Controllers/ContactController.php";
 require __DIR__ . "/Controllers/SuccessController.php";
 require __DIR__ . "/Controllers/AdminController.php";
 require __DIR__ . "/Controllers/AddAnnonceController.php";
+require __DIR__ . "/Controllers/EditController.php";
+
 
 // Create the controller instances
 $homeController = new HomeController();
@@ -21,6 +23,7 @@ $contactController = new ContactController();
 $successController = new SuccessController();
 $adminController = new AdminController();
 $addannonceController = new AddAnnonceController();
+$editController = new EditController();
 
 // Get the current request URI to get the route asked for by the user
 $route = $_SERVER['REQUEST_URI'];
@@ -52,6 +55,9 @@ switch ($route) {
         break;
     case URL_ADDANNONCE:
         $addannonceController->index();
+        break;
+    case URL_EDIT:
+        $editController->index();
         break;
     default: // Default, if no route is found
         $homeController->pageNotFound();
