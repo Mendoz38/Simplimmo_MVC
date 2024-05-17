@@ -10,6 +10,7 @@
                 <div class="bottom-menu pull-right">
                     <ul>
                         <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Contact" data-wow-delay="0.2s">Contact</a></li>
+                        <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Admin" >Admin</a></li>
                         <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Register" data-wow-delay="0.4s">Register</a></li>
                         <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Login" data-wow-delay="0.6s">Login</a></li>
                     </ul>

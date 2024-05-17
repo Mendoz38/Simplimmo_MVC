@@ -8,13 +8,43 @@ class AddAnnonceController
 
     public function index()
     {
-        $title = "Contact";
+        $title = "Ajouter une annonce";
+
+        $addAnnonceRepository = new AddAnnonceRepository() ;
+
+        $successMessage = '';
+        $errMessage = '';
+        echo $_POST['price'] ;
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $title = $_POST['title'];
+            $price = $_POST['price'] ?? '';
+            $surface = $_POST['surface'] ?? '';
+            /*  Continuer */
+
+            $registerData = [
+                'title' => $title,
+                'price' => $price,
+                'surface' => $surface
+                /*  Continuer */
+
+            ];
+
+
+            if ($addAnnonceRepository->addAnnonce($registerData)) {
+                $successMessage = 'Annonce créée !';
+            } else {
+                $errMessage = 'Une erreur est survenue lors de la création de l\'annonce.';
+            }
+        }
+
 
         $viewData = [
-			'title' => $title
+            'title' => $title,
+            'successMessage' => $successMessage,
+            'errMessage' => $errMessage,
         ];
-       
+
         $this->render('AddAnnonceTemplate', $viewData);
     }
-    
 }
