@@ -10,8 +10,15 @@ class AnnoncesController
     {
         $title = "Annonces";
 
+        $annoncesRepository = new AnnoncesRepository();
+        $allAnnonces = $annoncesRepository->getAllAnnonces() ;
+        $count = $annoncesRepository->countAll();
+
+
         $viewData = [
-			'title' => $title
+			'title' => $title,
+            'count' => $count,
+            'annonces' => $allAnnonces,
         ];
 
         $this->render('AnnoncesTemplate', $viewData);

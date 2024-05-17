@@ -40,3 +40,10 @@
 button > a {
     color: #fff ;
 }
+.type {
+    margin:0;
+    font-size: 1.2em;
+    text-align: center;
+    text-transform:uppercase;
+    border-bottom: #53555c solid 1px;
+}

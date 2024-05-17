@@ -50,8 +50,19 @@ include('__includes/02_nav.php');
                             <textarea name="description" class="form-control"></textarea>
                         </div>
                     </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Adresse </label>
+                            <input name="title" type="text" class="form-control" placeholder="Super villa ..." value="<?= $_POST["title"] ?? ''; ?>">
+                        </div>
 
-                    <div class="col-sm-12">
+                        </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label>Code postal</label>
+                            <input name="price" type="text" class="form-control" placeholder="3330000" value="<?= $_POST["price"] ?? ''; ?>">
+                        </div>
+                    </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Ville :</label>
@@ -62,7 +73,8 @@ include('__includes/02_nav.php');
                                     <option>Toulon</option>
                                 </select>
                             </div>
-                        </div>
+                        </div>                    <div class="col-sm-12">
+
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Vente / Location :</label>
@@ -118,8 +130,8 @@ include('__includes/02_nav.php');
                         <div class="col-sm-3">
                             <div class="form-group">
                                 <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Piscine
+                                    <label for="pool">
+                                        <input type="checkbox" name="pool"> Piscine
                                     </label>
                                 </div>
                             </div>

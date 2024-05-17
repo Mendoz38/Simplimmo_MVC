@@ -8,9 +8,10 @@ class HomeController
     public function index()
     {
 
-        $homeRepository = new HomeRepository();
-        $lastAnnonces = $homeRepository->getLast();
-        $count = $homeRepository->countAll();
+        $annoncesRepository = new AnnoncesRepository();
+
+        $lastAnnonces = $annoncesRepository->getLast();
+        $count = $annoncesRepository->countAll();
 
 
 

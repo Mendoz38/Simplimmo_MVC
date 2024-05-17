@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../Services/Response.php';
-require_once __DIR__ . '/../Repositories/HomeRepository.php';
+require_once __DIR__ . '/../Repositories/AnnoncesRepository.php';
 require_once __DIR__ . '/../Repositories/UserRepository.php';
 
 class AdminController
@@ -10,10 +10,10 @@ class AdminController
 
     public function index()
     {
-        $homeRepository = new HomeRepository();
+        $annoncesRepository = new AnnoncesRepository();
         $userRepository = new UserRepository();
 
-        $lastAnnonces = $homeRepository->getLast();
+        $lastAnnonces = $annoncesRepository->getLast();
         $allUsers = $userRepository->getAllUsers();
         $title = "Admin";
 
