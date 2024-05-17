@@ -14,24 +14,25 @@ class AddAnnonceController
 
         $successMessage = '';
         $errMessage = '';
-        echo $_POST['price'] ;
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $title = $_POST['title'];
             $price = $_POST['price'] ?? '';
             $surface = $_POST['surface'] ?? '';
+            $description = $_POST['description'] ?? '';
             /*  Continuer */
 
-            $registerData = [
+            $data = [
                 'title' => $title,
                 'price' => $price,
-                'surface' => $surface
+                'surface' => $surface,
+                'description' => $description
                 /*  Continuer */
 
             ];
 
 
-            if ($addAnnonceRepository->addAnnonce($registerData)) {
+            if ($addAnnonceRepository->addAnnonce($data)) {
                 $successMessage = 'Annonce créée !';
             } else {
                 $errMessage = 'Une erreur est survenue lors de la création de l\'annonce.';

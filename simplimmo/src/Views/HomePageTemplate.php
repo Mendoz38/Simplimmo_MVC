@@ -34,7 +34,7 @@ include('__includes/03_slider.php');
                                         <div class="property-icon">
                                             <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png"> ( <?= $annonce->getRooms(); ?> )|
                                             <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png"> (2)|
-                                            <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars.png"> (1)
+                                            <img src="<?= BASE_ASSETS; ?>/assets/img/icon/picine.png"> (1)
                                         </div>
                                     </div>
                                 </div>

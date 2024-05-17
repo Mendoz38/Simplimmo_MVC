@@ -100,7 +100,7 @@ include('__includes/02_nav.php');
                         <div class="col-sm-4">
 
                             <div class="form-group">
-                                <label for="price-range">Min baths :</label>
+                                <label for="price-range">Nombre de salle de bain :</label>
                                 <input type="text" class="span2" value="" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="[0]" id="min-baths" name="baths"><br />
                                 <b class="pull-left color">1</b>
                                 <b class="pull-right color">5</b>

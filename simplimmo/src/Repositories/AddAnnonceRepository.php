@@ -4,13 +4,15 @@ class AddAnnonceRepository extends Database {
 
     public function addAnnonce($data) {
         $currentDateTime = date('Y-m-d H:i:s');
+
         try {
-            $stmt = $this->getDb()->prepare("INSERT INTO annonces (title, price, surface, date_crea) 
-                                         VALUES (:title, :price, :surface, :date_crea)");
+            $stmt = $this->getDb()->prepare("INSERT INTO annonces (title, price, surface, description,  date_crea) 
+                                         VALUES (:title, :price, :surface, :description, :date_crea)");
 
             $stmt->bindParam(':title', $data['title']);
             $stmt->bindParam(':price', $data['price'], PDO::PARAM_INT);
             $stmt->bindParam(':surface', $data['surface']);
+            $stmt->bindParam(':description', $data['description']);
             $stmt->bindParam(':date_crea',$currentDateTime);
             /*  Continuer */
 
