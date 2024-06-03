@@ -17,8 +17,7 @@ ini_set('display_errors', 1);
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?= BASE_ASSETS; ?>/assets/img/icon/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="<?= BASE_ASSETS; ?>/assets/css/normalize.css">
     <link rel="stylesheet" href="<?= BASE_ASSETS; ?>/assets/css/font-awesome.min.css">

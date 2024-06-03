@@ -1,4 +1,3 @@
-
 <div class="container slider-content">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
@@ -77,62 +76,46 @@
                         <br>
                         <div class="search-row">
 
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Cheminée(3100)
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End of  -->
-
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Double évier(500)
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End of  -->
-
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Volets anti-tempête(99)
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End of  -->
-                        </div>
-
-                        <div class="search-row">
-
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Piscine(1190)
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End of  -->
-
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> 2 étages(4600)
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End of  -->
-
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Sortie de secours(200)
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" class="checkbox" id="cheminee">
+                                        <label for="cheminee"> Cheminée(100)
                                         </label>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- End of  -->
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" class="checkbox" id="checkbox2">
+                                        <label for="checkbox2"> Double évier(500)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" class="checkbox" id="checkbox3">
+                                        <label for="checkbox3"> Volets anti-tempête(99)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" class="checkbox" id="checkbox4">
+                                        <label for="checkbox4">  Piscine(1190)
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>

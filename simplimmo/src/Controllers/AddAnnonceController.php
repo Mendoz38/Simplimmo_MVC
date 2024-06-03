@@ -18,15 +18,43 @@ class AddAnnonceController
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $title = $_POST['title'];
             $price = $_POST['price'] ?? '';
+            $adress = $_POST['adress'] ?? '';
+            $city = $_POST['city'] ?? '';
+            $cp = $_POST['cp'] ?? '';
             $surface = $_POST['surface'] ?? '';
+            $rooms = $_POST['rooms'] ?? '';
+            $baths = $_POST['baths'] ?? '';
+            $type = $_POST['type'] ?? '';
             $description = $_POST['description'] ?? '';
+            $swimmingpool = $_POST['swimmingpool'] ?? '';
+            $garage = $_POST['garage'] ?? '';
+            $parking = $_POST['parking'] ?? '';
+            $terrasse = $_POST['terrasse'] ?? '';
+            $elevator = $_POST['elevator'] ?? '';
+            $box = $_POST['box'] ?? '';
+            $level = $_POST['level'] ?? '';
+            $garden = $_POST['garden'] ?? '';
             /*  Continuer */
 
             $data = [
                 'title' => $title,
                 'price' => $price,
+                'adress' => $adress,
+                'city' => $city,
+                'cp' => $cp,
                 'surface' => $surface,
-                'description' => $description
+                'rooms' => $rooms,
+                'baths' => $baths,
+                'type' => $type,
+                'description' => $description,
+                'swimmingpool' => $swimmingpool,
+                'garage' => $garage,
+                'parking' => $parking,
+                'terrasse' => $terrasse,
+                'elevator' => $elevator,
+                'box' => $box,
+                'level' => $level,
+                'garden' => $garden
                 /*  Continuer */
 
             ];

@@ -29,7 +29,6 @@
 <script src="<?= BASE_ASSETS; ?>assets/js/bootstrap-hover-dropdown.js"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/owl.carousel.min.js"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/wow.js"></script>
-<script src="<?= BASE_ASSETS; ?>assets/js/icheck.min.js"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/price-range.js"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/lightslider.min.js" type="text/javascript"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/main.js"></script>
@@ -40,6 +39,7 @@
 <script src="<?= BASE_ASSETS; ?>assets/js/jquery.tablesorter.js"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/jquery.tablesorter.widgets.js"></script>
 <script src="<?= BASE_ASSETS; ?>assets/js/jquery.tablesorter.config.js"></script>
+<script src="<?= BASE_ASSETS; ?>assets/js/perso.js"></script>
 
 <script>
     $(document).ready(function() {
