@@ -37,7 +37,7 @@ include('__includes/02_nav.php');
 
                         <div class="form-group">
                             <label>Prix du bien <small>(obligatoire)</small></label>
-                            <input name="price" type="text" class="form-control" placeholder="3330000" value="<?= $_POST["price"] ?? ''; ?>">
+                            <input name="price" type="text" class="form-control" placeholder="En Dollars" value="<?= $_POST["price"] ?? ''; ?>">
                         </div>
                     </div>
                 </div>
@@ -47,9 +47,23 @@ include('__includes/02_nav.php');
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label>Description détaillée :</label>
-                            <textarea name="description" class="form-control"></textarea>
+                            <textarea name="description" placeholder="Nombre de pièce, Etage, Déscriptif visuel..." class="form-control"></textarea>
                         </div>
+                    
                     </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Adresse</label>
+                        <input name="adresse" type="text" class="form-control" placeholder="Numéro de rue, Nom de la rue," value="<?= $_POST["adresse"] ?? ''; ?>">
+                    </div>
+
+                    </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>Code postal</label>
+                                <input name="codepostal" type="text" class="form-control" placeholder="Code Postal" value="<?= $_POST["codepostal"] ?? ''; ?>">
+                        </div>
+
 
                     <div class="col-sm-12">
                         <div class="col-sm-4">
