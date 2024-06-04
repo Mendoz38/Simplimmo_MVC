@@ -7,7 +7,6 @@ require __DIR__ . "/Controllers/RegisterController.php";
 require __DIR__ . "/Controllers/AnnoncesController.php";
 require __DIR__ . "/Controllers/DetailController.php";
 require __DIR__ . "/Controllers/ContactController.php";
-require __DIR__ . "/Controllers/SuccessController.php";
 require __DIR__ . "/Controllers/AdminController.php";
 require __DIR__ . "/Controllers/UserController.php";
 require __DIR__ . "/Controllers/AddAnnonceController.php";
@@ -21,7 +20,6 @@ $registerController = new RegisterController();
 $annoncesController = new AnnoncesController();
 $detailController = new DetailController();
 $contactController = new ContactController();
-$successController = new SuccessController();
 $adminController = new AdminController();
 $userController = new UserController();
 $addannonceController = new AddAnnonceController();
@@ -36,7 +34,7 @@ $id = isset($segment[3]) ? $segment[3] : NULL; // associer l'id au $segment[3]
 
 switch ($route) {
     case URL_HOMEPAGE:
-        $homeController->index();
+        $annoncesController->index();
         break;
     case URL_LOGIN:
         $loginController->index();

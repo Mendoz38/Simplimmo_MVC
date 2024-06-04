@@ -14,7 +14,7 @@ class AnnoncesRepository extends Database
     public function getLast()
     {
         $req = $this->getDb()->query('SELECT * FROM annonces ORDER BY id ASC LIMIT 12');
-        $data = $req->fetchAll(PDO::FETCH_CLASS, Home::class);
+        $data = $req->fetchAll(PDO::FETCH_CLASS, Annonces::class);
         return $data;
     }
 

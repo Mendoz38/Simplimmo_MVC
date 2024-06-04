@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../Services/Response.php';
+require_once __DIR__ . '/../Services/debug.php';
 
 class AddAnnonceController
 {
@@ -59,6 +60,7 @@ class AddAnnonceController
 
             ];
 
+           // pr($data);
 
             if ($addAnnonceRepository->addAnnonce($data)) {
                 $successMessage = 'Annonce créée !';

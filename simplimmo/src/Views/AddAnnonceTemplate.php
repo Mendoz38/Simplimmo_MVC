@@ -44,6 +44,27 @@ include('__includes/02_nav.php');
                             <input required name="price" type="text" class="form-control" placeholder="3330000" value="<?= $_POST["price"] ?? ''; ?>">
                         </div>
                     </div>
+
+
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <label>Type de bien :</label>
+                            <select required id="type" name="type" onchange="showDiv(this)" class="form-control">
+                                <option value="">--Sélectionnez--</option>
+                                <option value="Maison">Maison</option>
+                                <option value="Appartement">Appartement</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+
+                        <div class="form-group">
+                            <label for="property-geo">Surface du bien en m² :</label>
+                            <input required type="text" class="form-control" name="surface" value="185<?= $_POST["surface"] ?? ''; ?>"><br />
+                        </div>
+                    </div>
                 </div>
     </div>
 
@@ -79,57 +100,69 @@ include('__includes/02_nav.php');
                 </select>
             </div>
         </div>
-        <div class="col-sm-12">
+        
+        <!-- ----------------------Commun----------------- -->
+        <div class="col-sm-12 padding-top-15 flex end">
 
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="form-group">
-                    <label>Vente / Location :</label>
-                    <select name="rent" class="selectpicker form-control">
-                        <option> --Status-- </option>
-                        <option>Vente </option>
-                        <option>Location</option>
-                        <option>Viagier</option>
-
-                    </select>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="form-group">
-                    <label>Type de bien :</label>
-                    <select required id="type" name="type" onchange="showDiv(this)" class="selectpicker form-control">
+                    <label>Nombre de pièces :</label>
+                    <select id="rooms" name="rooms" class="form-control">
                         <option value="">--Sélectionnez--</option>
-                        <option value="Maison">Maison</option>
-                        <option value="Appartement">Appartement</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
                     </select>
 
                 </div>
             </div>
-        </div>
-        <div class="col-sm-12 padding-top-15">
-            <div class="col-sm-4">
-                <div class="form-group">
-                    <label for="property-geo">Nombre de chambres :</label>
-                    <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="[0]" id="min-bed" name="rooms"><br />
-                    <b class="pull-left color">0</b>
-                    <b class="pull-right color">10</b>
-                </div>
-            </div>
-            <div class="col-sm-4">
 
+            <div class="col-sm-3">
                 <div class="form-group">
-                    <label for="price-range">Nombre de salle de bain :</label>
-                    <input type="text" class="span2" value="" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="[0]" id="min-baths" name="baths"><br />
-                    <b class="pull-left color">1</b>
-                    <b class="pull-right color">5</b>
-                </div>
-            </div>
-            <div class="col-sm-4">
+                    <label>Salles de bains :</label>
+                    <select id="baths" name="baths" class="form-control">
+                        <option value="">--Sélectionnez--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
 
-                <div class="form-group">
-                    <label for="property-geo">Surface du bien en m² :</label>
-                    <input required type="text" class="form-control" name="surface" value="185<?= $_POST["surface"] ?? ''; ?>"><br />
                 </div>
             </div>
+
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>Nombre d'étages :</label>
+                    <select id="level" name="level" class="form-control">
+                        <option value="">--Sélectionnez--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                    <div class="form-group">
+                        <div class="checkbox-container">
+                            <input type="checkbox" class="checkbox" id="garage" name="garage" onchange="toggleDiv('garage', 'garageDiv')">
+                            <label for="garage">Garage </label>
+                            <span id="garageDiv" style="display: none;">
+                                <input name="garage" type="text" placeholder="m²" class="form-control small_input" value="<?= $_POST["garage"] ?? ''; ?>">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
         </div>
 
         <!-- ----------------------House----------------- -->
@@ -207,30 +240,6 @@ include('__includes/02_nav.php');
             </div>
         </div>
 
-        <!-- ----------------------Commun----------------- -->
-        <div id="commun">
-            <div class="col-sm-12 padding-top-15">
-                <div class="col-sm-3">
-                    <div class="form-group">
-                        <div class="checkbox-container">
-                            <input type="checkbox" class="checkbox" id="garage" name="garage" onchange="toggleDiv('garage', 'garageDiv')">
-                            <label for="garage">Garage </label>
-                            <span id="garageDiv" style="display: none;">
-                                <input name="garage" type="text" placeholder="m²" class="form-control small_input" value="<?= $_POST["garage"] ?? ''; ?>">
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group">
-                        <div class="checkbox-container">
-                            <input name="level" type="text" placeholder="m²" class="form-control small_input" value="<?= $_POST["level"] ?? ''; ?>">
-                            <label for="level">Niveaux </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 

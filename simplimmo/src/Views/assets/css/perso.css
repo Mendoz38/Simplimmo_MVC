@@ -40,7 +40,9 @@
     display: flex;
     justify-content: space-around;
 }
-
+.end {
+    align-items: end;
+}
 button > a {
     color: #fff ;
 }
