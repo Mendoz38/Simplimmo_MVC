@@ -1,6 +1,8 @@
 <?php
+// 1er MVCR appelé
 
 require_once __DIR__ . '/../Services/Response.php';
+require_once __DIR__ . '/../Services/debug.php';
 
 class AnnoncesController
 {
@@ -20,7 +22,7 @@ class AnnoncesController
             'count' => $count,
             'annonces' => $allAnnonces,
         ];
-
+      //  pr($viewData);
         $this->render('AnnoncesTemplate', $viewData);
     }
 }

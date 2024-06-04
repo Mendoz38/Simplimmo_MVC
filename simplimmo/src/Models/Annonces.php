@@ -14,14 +14,15 @@ class Annonces {
     private $date_crea;
 
         // Propriétés supplémentaires pour house
-        private $pool;
+        private $swimmingpool;
         private $garden;
-        private $test;
     
-        // Propriétés supplémentaires pour apartment
+        // Propriétés supplémentaires pour appartment
         private $elevator;
         private $box;
         private $level;
+        private $parking;
+        private $terrasse;
 
     public function getId()
     {
@@ -68,8 +69,8 @@ class Annonces {
         return $this->date_crea;
     }
 
-    public function getPool() {
-        return $this->pool;
+    public function getswimmingpool() {
+        return $this->swimmingpool;
     }
 
     public function getGarden() {
@@ -88,16 +89,21 @@ class Annonces {
         return $this->level;
     }
 
-    public function getTest() {
-        return $this->test;
+    public function getTerrasse() {
+        return $this->terrasse;
+    }
+
+    public function getParking() {
+        return $this->parking;
     }
 
     public function setAdditionalProperties($data) {
-        if (isset($data['pool'])) $this->pool = $data['pool'];
-        if (isset($data['garden'])) $this->garden = $data['garden'];
-        if (isset($data['elevator'])) $this->elevator = $data['elevator'];
-        if (isset($data['box'])) $this->box = $data['box'];
-        if (isset($data['level'])) $this->level = $data['level'];
-        if (isset($data['test'])) $this->test = $data['test'];
+        if (isset($data['swimmingpool'])) $this->swimmingpool = $data['swimmingpool']; //house
+        if (isset($data['garden'])) $this->garden = $data['garden'];//house
+        if (isset($data['level'])) $this->level = $data['level'];//house
+        if (isset($data['elevator'])) $this->elevator = $data['elevator']; //appartment
+        if (isset($data['box'])) $this->box = $data['box']; //appartment
+        if (isset($data['terrasse'])) $this->terrasse = $data['terrasse']; //appartment
+        if (isset($data['parking'])) $this->parking = $data['parking']; //appartment
     }
 }
