@@ -24,48 +24,39 @@ class Annonces {
         private $parking;
         private $terrasse;
 
-    public function getId()
-    {
+    public function getId()    {
         return $this->id;
     }
 
-    public function getTitle()
-    {
+    public function getTitle()    {
         return $this->title;
     }
 
-    public function getDescription()
-    {
+    public function getDescription()    {
         return $this->description;
     }
 
-    public function getCity()
-    {
+    public function getCity()    {
         return $this->city;
     }
 
-    public function getPrice()
-    {
+    public function getPrice()    {
         return $this->price;
     }
 
-    public function getSurface()
-    {
+    public function getSurface()    {
         return $this->surface;
     }
 
-    public function getRooms()
-    {
+    public function getRooms()    {
         return $this->rooms;
     }
 
-    public function getType()
-    {
+    public function getType()    {
         return $this->type;
     }
 
-    public function getDateCrea()
-    {
+    public function getDateCrea()    {
         return $this->date_crea;
     }
 
