@@ -1,6 +1,5 @@
 
 <?php 
-echo "<br /> : DetailTemplate";
 include('__includes/01_head.php'); 
 include('__includes/02_nav.php'); 
 
@@ -11,6 +10,7 @@ include('__includes/02_nav.php');
 
                 <div class="clearfix padding-top-40" >
                     <h2>Annonce n° <?= $id ; ?></h2>
+
                     <div class="col-md-8 single-property-content prp-style-2">
                         <div class="">
                             <div class="row">
@@ -126,28 +126,20 @@ include('__includes/02_nav.php');
                                 <div class="dealer-content">
                                     <div class="inner-wrapper">
                                         <div class="single-property-header">                                          
-                                            <h1 class="property-title">Villa à Coral Gables</h1>
-                                            <span class="property-price">$825,000</span>
+                                            <h1 class="property-title"><?= $annonces[0]->getTitle() ; ?> </h1>
+                                            <span class="property-price"> <?= $annonces[0]->getprice() ; ?> €</span>
                                         </div>
 
                                         <div class="property-meta entry-meta clearfix ">   
 
-                                            <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
-                                                <span class="property-info-icon icon-tag">                                                                                      
-                                                    <img src="<?= BASE_ASSETS; ?>/assets/img/icon/sale-orange.png">
-                                                </span>
-                                                <span class="property-info-entry">
-                                                    <span class="property-info-label">Statut</span>
-                                                    <span class="property-info-value">À vendre</span>
-                                                </span>
-                                            </div>
+
 
                                             <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
                                                 <span class="property-info icon-area">
                                                     <img src="<?= BASE_ASSETS; ?>/assets/img/icon/room-orange.png">
                                                 </span>
                                                 <span class="property-info-entry">
-                                                    <span class="property-info-label">Zone</span>
+                                                    <span class="property-info-label">Surface</span>
                                                     <span class="property-info-value">3500<b class="property-info-unit">pi²</b></span>
                                                 </span>
                                             </div>
@@ -157,7 +149,7 @@ include('__includes/02_nav.php');
                                                     <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed-orange.png">
                                                 </span>
                                                 <span class="property-info-entry">
-                                                    <span class="property-info-label">Chambres à coucher</span>
+                                                    <span class="property-info-label">Pièces (rooms)</span>
                                                     <span class="property-info-value">3</span>
                                                 </span>
                                             </div>
@@ -167,27 +159,8 @@ include('__includes/02_nav.php');
                                                     <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars-orange.png">
                                                 </span>
                                                 <span class="property-info-entry">
-                                                    <span class="property-info-label">Salles de bain</span>
+                                                    <span class="property-info-label">Garage</span>
                                                     <span class="property-info-value">3.5</span>
-                                                </span>
-                                            </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
-                                                <span class="property-info-icon icon-bath">
-                                                    <img src="<?= BASE_ASSETS; ?>/assets/img/icon/os-orange.png">
-                                                </span>
-                                                <span class="property-info-entry">
-                                                    <span class="property-info-label">Salles d'eau</span>
-                                                    <span class="property-info-value">3.5</span>
-                                                </span>
-                                            </div>
-
-                                            <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
-                                                <span class="property-info-icon icon-garage">
-                                                    <img src="<?= BASE_ASSETS; ?>/assets/img/icon/room-orange.png">
-                                                </span>
-                                                <span class="property-info-entry">
-                                                    <span class="property-info-label">Garages</span>
-                                                    <span class="property-info-value">2</span>
                                                 </span>
                                             </div>
 
@@ -196,10 +169,22 @@ include('__includes/02_nav.php');
                                                     <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer-orange.png">
                                                 </span>
                                                 <span class="property-info-entry">
-                                                    <span class="property-info-label">Douches</span>
+                                                    <span class="property-info-label">Salle de bains</span>
                                                     <span class="property-info-value">2</span>
                                                 </span>
                                             </div>
+
+                                            <?php if ($annonces[0]->getGarden() ) { ?>
+                                            <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
+                                                <span class="property-info-icon icon-garage">
+                                                    <img src="<?= BASE_ASSETS; ?>/assets/img/icon/room-orange.png">
+                                                </span>
+
+                                                <span class="property-info-entry">
+                                                    <span class="property-info-label">Jardin de  <?= $annonces[0]->getGarden() ; ?> m²</span>
+                                                </span>
+                                            </div>
+                                        <?php } ?>
 
 
                                         </div>

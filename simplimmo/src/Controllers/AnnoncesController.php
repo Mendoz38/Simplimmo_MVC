@@ -16,13 +16,12 @@ class AnnoncesController
         $allAnnonces = $annoncesRepository->getAllAnnonces() ;
         $count = $annoncesRepository->countAll();
 
-
         $viewData = [
 			'title' => $title,
             'count' => $count,
             'annonces' => $allAnnonces,
         ];
-      //  pr($viewData);
+        //pr($viewData);
         $this->render('AnnoncesTemplate', $viewData);
     }
 }

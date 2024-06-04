@@ -69,7 +69,7 @@ include('__includes/02_nav.php');
                                         <a href="Detail/<?= $annonce->getId(); ?> "><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-<?= rand(1, 5); ?>.jpg"></a>
                                     </div>
                                     <div class="item-entry overflow">
-                                        <h4 class="type"><a href="Detail/<?= $annonce->getId(); ?>"> <?= $annonce->getType(); ?> </a></h4>
+                                        <h4 class="type"><a href="Detail/<?= $annonce->getId(); ?>"> <?= $annonce->getType(); ?> <?= $annonce->getId(); ?> </a></h4>
                                         <h5><a href="Detail/<?= $annonce->getId(); ?>"> <?= $annonce->getTitle(); ?> </a></h5>
                                         <div class="dot-hr"></div>
                                         <span class="pull-left"><b> Surface :</b> <?= $annonce->getSurface(); ?> m² </span>

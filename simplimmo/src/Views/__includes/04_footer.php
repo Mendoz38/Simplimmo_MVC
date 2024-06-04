@@ -8,11 +8,17 @@
                     <span> (C) <a href="#">SimplonTeam</a> , All rights reserved 2024 </span>
                 </div>
                 <div class="bottom-menu pull-right">
+                        <?php  
+                        if ($_SESSION['user_email']) {
+                        echo 'Connecté sous '. $_SESSION['user_email'].'<a href="'.BASE_URL.'/Admin"> Administation</a>'; 
+                        } else { ?>
                     <ul>
                         <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Contact" data-wow-delay="0.2s">Contact</a></li>
-                        <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Admin" >Admin</a></li>
                         <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Register" data-wow-delay="0.4s">Register</a></li>
                         <li><a class="wow fadeInUp animated" href="<?= BASE_URL ; ?>/Login" data-wow-delay="0.6s">Login</a></li>
+                        
+                        <?php }
+                        ?>
                     </ul>
                 </div>
             </div>

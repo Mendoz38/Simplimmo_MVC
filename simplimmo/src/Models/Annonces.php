@@ -89,6 +89,7 @@ class Annonces {
     }
 
     public function setAdditionalProperties($data) {
+        if (isset($data['id'])) $this->id = $data['id']; //house
         if (isset($data['swimmingpool'])) $this->swimmingpool = $data['swimmingpool']; //house
         if (isset($data['garden'])) $this->garden = $data['garden'];//house
         if (isset($data['level'])) $this->level = $data['level'];//house
