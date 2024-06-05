@@ -21,9 +21,10 @@ class AnnoncesRepository extends Database
     // Supprimer une annonce
     public function delAnnonce($annonceId)
     {
-        $req = $this->getDb()->query('DELETE FROM annonces WHERE id = '.$annonceId.' ');
-        $data = $req->fetchAll(PDO::FETCH_CLASS, Annonces::class);
-        return $data;
+        $req = $this->getDb()->prepare('DELETE FROM annonces WHERE id = :id');
+        $req->bindParam(':id', $annonceId, PDO::PARAM_INT);
+        return $req->execute();
+        
     }
 
     public function getAllAnnonces()

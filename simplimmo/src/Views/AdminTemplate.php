@@ -46,7 +46,7 @@ include('__includes/02_nav.php');
                         <td><?= $annonce->getPrice(); ?> €</td>
                         <td><?= $annonce->getRooms(); ?></td>
                         <td>
-                            <a class="delete_com"  href="Delete/<?= $annonce->getId(); ?>" >
+                            <a class="delete_com" data-emp-id="<?= $annonce->getId(); ?>" data-emp-reponse="<div class='alert alert-danger2' role='alert'>Attention, cette action est irreversible !!</div>" data-annonce-id="<?= $annonce->getId(); ?>" href="javascript:void(0)">
                                 <button class="btn btn-rouge btn-fill btn-wd" type="button" title="Supprimer l'annonce">
                                     <span class="fa fa-trash-o"></span>
                                 </button>
@@ -102,7 +102,7 @@ include('__includes/02_nav.php');
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                <a href="Delete/<?= $annonce->getId(); ?>" class="btn btn-danger" id="confirmDeleteBtn">Supprimer</a>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Supprimer</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -130,7 +130,30 @@ include('__includes/02_nav.php');
                     delAnnonce(annonceId)
                 });
 
+                function delAnnonce(annonceId) {
 
+                    var url = window.location.origin + "/public/Delete/" + annonceId;
+                    console.log("URL de requête AJAX:", url); 
+    
+                    $.ajax({
+                        type: "POST",
+                        url:  url, 
+                        success: function(response) {
+            console.log("Réponse du serveur:", response);
+                            if (response.success) {
+                                window.location.reload(); 
+                            } else {
+                                //alert("zzzz", response.message); 
+                                window.location.reload(); 
+                            }
+                        },
+                        error: function(error) {
+                            console.error("Erreur lors de la suppresseion :", error);
+                            //alert("Erreur lors de la suppresseion.");
+                                window.location.reload(); 
+                        }
+                    });
+                }
 
 
             });
