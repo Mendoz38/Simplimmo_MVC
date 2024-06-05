@@ -9,7 +9,7 @@ include('__includes/02_nav.php');
             <div class="container">   
 
                 <div class="clearfix padding-top-40" >
-                    <h2>Annonce n° <?= $id ; ?></h2>
+                    <h2>Date de parution : <?= $annonces[0]->getDateCrea() ; ?></h2>
 
                     <div class="col-md-8 single-property-content prp-style-2">
                         <div class="">
@@ -47,7 +47,7 @@ include('__includes/02_nav.php');
                                 <div class="section">
                                     <h4 class="s-property-title">Description</h4>
                                     <div class="s-property-content">
-                                        <p>Nulla quis dapibus nisl. Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies commodo arcu nec pretium. Nullam sed arcu ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies                                </p>
+                                        <p><?= $annonces[0]->getDescription() ; ?>  </p>
                                     </div>
                                 </div>
                                 <!-- Fin de la zone de description -->
@@ -140,7 +140,7 @@ include('__includes/02_nav.php');
                                                 </span>
                                                 <span class="property-info-entry">
                                                     <span class="property-info-label">Surface</span>
-                                                    <span class="property-info-value">3500<b class="property-info-unit">pi²</b></span>
+                                                    <span class="property-info-value"> <?= $annonces[0]->getSurface() ; ?><b class="property-info-unit"> m²</b></span>
                                                 </span>
                                             </div>
 
@@ -149,30 +149,32 @@ include('__includes/02_nav.php');
                                                     <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed-orange.png">
                                                 </span>
                                                 <span class="property-info-entry">
-                                                    <span class="property-info-label">Pièces (rooms)</span>
-                                                    <span class="property-info-value">3</span>
+                                                    <span class="property-info-label"><?= $annonces[0]->getRooms() ; ?> Pièces</span>
                                                 </span>
                                             </div>
 
-                                            <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
-                                                <span class="property-info-icon icon-bath">
-                                                    <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars-orange.png">
-                                                </span>
-                                                <span class="property-info-entry">
-                                                    <span class="property-info-label">Garage</span>
-                                                    <span class="property-info-value">3.5</span>
-                                                </span>
-                                            </div>
 
                                             <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
                                                 <span class="property-info-icon icon-garage">
                                                     <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer-orange.png">
                                                 </span>
                                                 <span class="property-info-entry">
-                                                    <span class="property-info-label">Salle de bains</span>
-                                                    <span class="property-info-value">2</span>
+                                                    <span class="property-info-label"><?= $annonces[0]->getBaths() ; ?> Salle de bains</span>
+                                                </span>
+                                            </div>   
+                                            
+                                            <?php if ($annonces[0]->getParking() ) { ?>
+                                            <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
+                                                <span class="property-info-icon icon-bath">
+                                                    <img src="<?= BASE_ASSETS; ?>/assets/img/icon/cars-orange.png">
+                                                </span>
+                                                <span class="property-info-entry">
+                                                    <span class="property-info-label">Garage</span>
+                                                    <span class="property-info-value"><?= $annonces[0]->getParking() ; ?> m²</span>
                                                 </span>
                                             </div>
+                                        <?php } ?>
+
 
                                             <?php if ($annonces[0]->getGarden() ) { ?>
                                             <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
@@ -187,9 +189,22 @@ include('__includes/02_nav.php');
                                         <?php } ?>
 
 
+                                            <?php if ($annonces[0]->getswimmingpool() ) { ?>
+                                            <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
+                                                <span class="property-info-icon icon-garage">
+                                                    <img src="<?= BASE_ASSETS; ?>/assets/img/icon/picine-orange.png">
+                                                </span>
+
+                                                <span class="property-info-entry">
+                                                    <span class="property-info-label">Piscine de  <?= $annonces[0]->getswimmingpool() ; ?> m²</span>
+                                                </span>
+                                            </div>
+                                        <?php } ?>
+
+
                                         </div>
                                         <div class="dealer-section-space">
-                                            <span>Informations sur le concessionnaire</span>
+                                            <span>Agent en charge du bien</span>
                                         </div>
                                         <div class="clear">
                                             <div class="col-xs-4 col-sm-4 dealer-face">
@@ -223,18 +238,16 @@ include('__includes/02_nav.php');
                                             </div>
                                         </div>
 
-                                        <div class="clear">
-                                            <ul class="dealer-contacts">                                       
-                                                <li><i class="pe-7s-map-marker strong"> </i> 9089 votre adresse ici</li>
-                                                <li><i class="pe-7s-mail strong"> </i> email@votreentreprise.com</li>
-                                                <li><i class="pe-7s-call strong"> </i> +1 908 967 5906</li>
-                                            </ul>
-                                            <p>Duis mollis  blandit tempus porttitor curabiturDuis mollis  blandit tempus porttitor curabitur , est non…</p>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
+                                        <fieldset >
+                                            <div class="row">
+                                                <div class="col-xs-12 center">  
+                                                <button class="navbar-btn nav-button wow center login" data-wow-delay="0.4s"><a href="<?= BASE_URL ; ?>/Contact" >Faire une offre</a></button>
+                                                </div>  
+                                            </div>
+                                        </fieldset> 
 
 
                         </aside>

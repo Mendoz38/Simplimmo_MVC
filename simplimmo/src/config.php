@@ -23,5 +23,6 @@ define("URL_SUCCESS", BASE_URL . "/Success");
 define("URL_ADMIN", BASE_URL . "/Admin");
 define("URL_ADDANNONCE", BASE_URL . "/AddAnnonce");
 define("URL_EDIT", BASE_URL . "/Edit");
+define("URL_DELETE", BASE_URL . "/Delete");
 define("URL_EDIT_USER", BASE_URL . "/EditUser");
 

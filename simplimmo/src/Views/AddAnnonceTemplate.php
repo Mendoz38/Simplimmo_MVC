@@ -62,7 +62,7 @@ include('__includes/02_nav.php');
 
                         <div class="form-group">
                             <label for="property-geo">Surface du bien en m² :</label>
-                            <input required type="text" class="form-control" name="surface" value="185<?= $_POST["surface"] ?? ''; ?>"><br />
+                            <input required type="text" class="form-control" name="surface" value="<?= $_POST["surface"] ?? ''; ?>"><br />
                         </div>
                     </div>
                 </div>
@@ -242,35 +242,6 @@ include('__includes/02_nav.php');
 
     </div>
 
-
-
-    <!--
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="property-images">Choisir l'image :</label>
-                            <input class="form-control" type="file" id="property-images">
-                            <p class="help-block">Select multipel images for your property .</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="property-video">Property video :</label>
-                            <input class="form-control" value="" placeholder="http://www.youtube.com, http://vimeo.com" name="property_video" type="text">
-                        </div>
-
-                        <div class="form-group">
-                            <input class="form-control" value="" placeholder="http://www.youtube.com, http://vimeo.com" name="property_video" type="text">
-                        </div>
-
-                        <div class="form-group">
-                            <input class="form-control" value="" placeholder="http://www.youtube.com, http://vimeo.com" name="property_video" type="text">
-                        </div>
-                    </div>
-
-
-                </div>
--->
 
     <input type='submit' class='btn btn-finish btn-primary ' name='submit' value='Publier' />
     <hr />

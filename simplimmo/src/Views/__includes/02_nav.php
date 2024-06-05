@@ -15,7 +15,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse yamm" id="navigation">
             <div class="button navbar-right">
-                <button class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.4s"><a href="index.php" >Soumettre un bien</a></button>
+                <button class="navbar-btn nav-button wow bounceInRight login" data-wow-delay="0.4s"><a href="<?= BASE_URL ; ?>/Contact" >Soumettre un bien</a></button>
             </div>
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li class="dropdown ymm-sw " data-wow-delay="0.1s"><a href="<?= BASE_URL ; ?>/" class="wow fadeInDown">Accueil</a></li>

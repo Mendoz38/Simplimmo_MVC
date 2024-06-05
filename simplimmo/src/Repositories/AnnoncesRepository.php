@@ -18,6 +18,14 @@ class AnnoncesRepository extends Database
         return $data;
     }
 
+    // Supprimer une annonce
+    public function delAnnonce($annonceId)
+    {
+        $req = $this->getDb()->query('DELETE FROM annonces WHERE id = '.$annonceId.' ');
+        $data = $req->fetchAll(PDO::FETCH_CLASS, Annonces::class);
+        return $data;
+    }
+
     public function getAllAnnonces()
     {
         $sql = "

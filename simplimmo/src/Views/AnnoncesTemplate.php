@@ -14,6 +14,19 @@ include('__includes/02_nav.php');
     </div>
 </div>
 <!-- End page header -->
+<?php if ($_POST["search"] ?? '' == "search") { ?>
+<h3 class="center">
+    Résultats pour la recherche :<br />
+<?php 
+   if($_POST['type']) {echo $_POST['type'] ; }
+   if($_POST['city']) {echo '| Ville : '.$_POST['city'] ; }
+   if($_POST['price']) {echo '| Prix : '. $_POST['price'].' €' ; }
+   if($_POST['rooms']) {echo '| Pièces : '. $_POST['rooms'] ; }
+   if($_POST['baths']) {echo '| Salles de bain : '. $_POST['baths'] ; }
+    
+?>
+</h3>
+<?php } ?>
 
 <!-- property area -->
 <div class="properties-area recent-property" style="background-color: #FFF;">
@@ -69,12 +82,11 @@ include('__includes/02_nav.php');
                                         <a href="Detail/<?= $annonce->getId(); ?> "><img src="<?= BASE_ASSETS; ?>/assets/img/demo/property-<?= rand(1, 5); ?>.jpg"></a>
                                     </div>
                                     <div class="item-entry overflow">
-                                        <h4 class="type"><a href="Detail/<?= $annonce->getId(); ?>"> <?= $annonce->getType(); ?> <?= $annonce->getId(); ?> </a></h4>
+                                        <h4 class="type"><a href="Detail/<?= $annonce->getId(); ?>"> <?= $annonce->getType(); ?> n°<?= $annonce->getId(); ?> </a></h4>
                                         <h5><a href="Detail/<?= $annonce->getId(); ?>"> <?= $annonce->getTitle(); ?> </a></h5>
                                         <div class="dot-hr"></div>
                                         <span class="pull-left"><b> Surface :</b> <?= $annonce->getSurface(); ?> m² </span>
                                         <span class="proerty-price pull-right"> <?= $annonce->getPrice(); ?> €</span>
-                                        <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
                                         <div class="property-icon">
                                             <img src="<?= BASE_ASSETS; ?>/assets/img/icon/bed.png"> ( <?= $annonce->getRooms(); ?> )|
                                             <img src="<?= BASE_ASSETS; ?>/assets/img/icon/shawer.png"> (2)
@@ -109,11 +121,11 @@ include('__includes/02_nav.php');
                             <h3 class="panel-title"> Recherche Avancé </h3>
                         </div>
                         <div class="panel-body search-widget">
-                            <form action="" class=" form-inline">
+                            <form action=""  method="post" class=" form-inline">
                                 <fieldset>
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <input type="text" class="form-control" placeholder="Key word">
+                                            <input type="text"  name="key"  class="form-control" placeholder="Mot clé">
                                         </div>
                                     </div>
                                 </fieldset>
@@ -122,7 +134,7 @@ include('__includes/02_nav.php');
                                     <div class="row">
                                         <div class="col-xs-6">
 
-                                            <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select Your City">
+                                            <select id="lunchBegins" name="city"  class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Ville">
 
                                                 <option>New york, CA</option>
                                                 <option>Paris</option>
@@ -134,11 +146,10 @@ include('__includes/02_nav.php');
                                         </div>
                                         <div class="col-xs-6">
 
-                                            <select id="basic" class="selectpicker show-tick form-control">
+                                            <select id="basic"  name="type"  class="selectpicker form-control">
                                                 <option> -Statut- </option>
                                                 <option>Location</option>
                                                 <option>Achat</option>
-                                                <option>Occasion</option>
 
                                             </select>
                                         </div>
@@ -148,16 +159,16 @@ include('__includes/02_nav.php');
                                 <fieldset class="padding-5">
                                     <div class="row">
                                         <div class="col-xs-6">
-                                            <label for="price-range"> Fourchette de prixe ($):</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[0,450]" id="price-range"><br />
-                                            <b class="pull-left color">2000$</b>
-                                            <b class="pull-right color">100000$</b>
+                                            <label for="price-range"> Prix (€):</label>
+                                            <input type="text" name="price" class="span2" value="" data-slider-min="20000" data-slider-max="990000" data-slider-step="1000" data-slider-value="[20000,450000]" id="price-range"><br />
+                                            <b class="pull-left color">20 000</b>
+                                            <b class="pull-right color">990 000</b>
                                         </div>
                                         <div class="col-xs-6">
-                                            <label for="property-geo"> Localisation de la propriété (m2) :</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[50,450]" id="property-geo"><br />
-                                            <b class="pull-left color">40m</b>
-                                            <b class="pull-right color">12000m</b>
+                                            <label for="property-geo"> Surface (m2) :</label>
+                                            <input type="text" class="span2" value="" data-slider-min="40" data-slider-max="12000" data-slider-step="100" data-slider-value="[40,12000]" id="property-geo"><br />
+                                            <b class="pull-left color">40</b>
+                                            <b class="pull-right color">12000</b>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -165,17 +176,17 @@ include('__includes/02_nav.php');
                                 <fieldset class="padding-5">
                                     <div class="row">
                                         <div class="col-xs-6">
-                                            <label for="price-range">Nombre minimum de salles de bains :</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="min-baths"><br />
+                                            <label for="price-range">Salles de bains :</label>
+                                            <input type="text"  name="baths" class="span2" value="" data-slider-min="1" data-slider-max="3" data-slider-step="1" data-slider-value="[1,1]" id="min-baths"><br />
                                             <b class="pull-left color">1</b>
-                                            <b class="pull-right color">120</b>
+                                            <b class="pull-right color">3</b>
                                         </div>
 
                                         <div class="col-xs-6">
-                                            <label for="property-geo">Nombre minimum de chambres :</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="min-bed"><br />
+                                            <label for="property-geo">Pièces :</label>
+                                            <input type="text"  name="rooms" class="span2" value="" data-slider-min="1" data-slider-max="10" data-slider-step="1" data-slider-value="[1,1]" id="min-bed"><br />
                                             <b class="pull-left color">1</b>
-                                            <b class="pull-right color">120</b>
+                                            <b class="pull-right color">10</b>
 
                                         </div>
                                     </div>
@@ -251,7 +262,7 @@ include('__includes/02_nav.php');
                                         </div>
                                     </div>
                                 </fieldset>
-
+                                <input type="hidden"  name="search"  value="search"  class="form-control" >
                                 <fieldset>
                                     <div class="row">
                                         <div class="col-xs-12">

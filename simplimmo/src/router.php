@@ -11,6 +11,7 @@ require __DIR__ . "/Controllers/AdminController.php";
 require __DIR__ . "/Controllers/UserController.php";
 require __DIR__ . "/Controllers/AddAnnonceController.php";
 require __DIR__ . "/Controllers/EditController.php";
+require __DIR__ . "/Controllers/DeleteController.php";
 
 
 // Create the controller instances
@@ -24,6 +25,7 @@ $adminController = new AdminController();
 $userController = new UserController();
 $addannonceController = new AddAnnonceController();
 $editController = new EditController();
+$deleteController = new DeleteController();
 
 $route = $_SERVER['REQUEST_URI'];
 $segment = explode('/', $route); // explode l'URL entre les / pour isoler les segments. Dans mon cas /public/Detail/75 
@@ -63,8 +65,11 @@ switch ($route) {
     case URL_ADDANNONCE:
         $addannonceController->index();
         break;
-    case URL_EDIT:
-        $editController->index();
+    case URL_EDIT . '/' . $id:
+        $editController->index($id);
+        break;
+    case URL_DELETE . '/' . $id:
+        $deleteController->index($id);
         break;
     default: // Default, if no route is found
         $homeController->pageNotFound();

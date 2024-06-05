@@ -76,6 +76,10 @@ class AddAnnonceController
             'errMessage' => $errMessage,
         ];
 
-        $this->render('AddAnnonceTemplate', $viewData);
+        if ($_SESSION['user_email'] ?? '') {
+            $this->render('AddAnnonceTemplate', $viewData);
+        } else {
+            $this->render('404');
+        }
     }
 }

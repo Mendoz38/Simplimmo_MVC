@@ -9,7 +9,7 @@
                 </div>
                 <div class="bottom-menu pull-right">
                         <?php  
-                        if ($_SESSION['user_email']) {
+                        if ($_SESSION['user_email'] ?? '') {
                         echo 'Connecté sous '. $_SESSION['user_email'].'<a href="'.BASE_URL.'/Admin"> Administation</a>'; 
                         } else { ?>
                     <ul>

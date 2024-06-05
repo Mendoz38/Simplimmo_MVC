@@ -10,6 +10,7 @@ class Annonces {
     private $price;
     private $surface;
     private $rooms;
+    private $baths;
     private $type;
     private $date_crea;
 
@@ -50,6 +51,10 @@ class Annonces {
 
     public function getRooms()    {
         return $this->rooms;
+    }
+
+    public function getBaths()    {
+        return $this->baths;
     }
 
     public function getType()    {
