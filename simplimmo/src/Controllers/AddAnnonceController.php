@@ -23,8 +23,8 @@ class AddAnnonceController
             $city = $_POST['city'] ?? '';
             $cp = $_POST['cp'] ?? '';
             $surface = $_POST['surface'] ?? '';
-            $rooms = $_POST['rooms'] ?? '';
-            $baths = $_POST['baths'] ?? '';
+            $rooms = isset($_POST['rooms']) && $_POST['rooms'] !== '' ? (INT)$_POST['rooms'] : NULL;
+            $baths = isset($_POST['baths']) && $_POST['baths'] !== '' ? (INT)$_POST['baths'] : NULL;
             $type = $_POST['type'] ?? '';
             $description = $_POST['description'] ?? '';
             $swimmingpool = $_POST['swimmingpool'] ?? '';
@@ -32,8 +32,8 @@ class AddAnnonceController
             $parking = $_POST['parking'] ?? '';
             $terrasse = $_POST['terrasse'] ?? '';
             $elevator = $_POST['elevator'] ?? '';
-            $box = $_POST['box'] ?? '';
-            $level = $_POST['level'] ?? '';
+            $box = isset($_POST['box']) && $_POST['box'] !== '' ? (INT)$_POST['box'] : NULL;
+            $level = isset($_POST['level']) && $_POST['level'] !== '' ? (INT)$_POST['level'] : NULL;
             $garden = $_POST['garden'] ?? '';
             /*  Continuer */
 

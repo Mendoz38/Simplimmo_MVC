@@ -51,8 +51,8 @@ include('__includes/02_nav.php');
                             <label>Type de bien :</label>
                             <select required id="type" name="type" onchange="showDiv(this)" class="form-control">
                                 <option value="">--Sélectionnez--</option>
-                                <option value="Maison">Maison</option>
-                                <option value="Appartement">Appartement</option>
+                                <option value="Maison"   <?php if ($_POST['type'] ?? '' == 'Maison') { echo 'selected'; 	} ?> >Maison</option>
+                                <option value="Appartement"   <?php if ($_POST['type'] ?? '' == 'Appartement') { echo 'selected'; 	} ?> >Appartement</option>
                             </select>
 
                         </div>
@@ -73,7 +73,7 @@ include('__includes/02_nav.php');
         <div class="col-sm-12">
             <div class="form-group">
                 <label>Description détaillée :</label>
-                <textarea name="description" class="form-control"></textarea>
+                <textarea name="description" class="form-control" <?= $_POST["description"] ?? ''; ?> ></textarea>
             </div>
         </div>
         <div class="col-sm-6">
@@ -93,10 +93,10 @@ include('__includes/02_nav.php');
             <div class="form-group">
                 <label>Ville :</label>
                 <select name="city" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Selectionnez votre ville">
-                    <option>Lille</option>
-                    <option>Paris</option>
-                    <option>Grenoble</option>
-                    <option>Toulon</option>
+                    <option <?php if ($_POST['city'] ?? '' == 'Lille') { echo 'selected'; 	} ?>  value="Lille"  >Lille</option>
+                    <option <?php if ($_POST['city'] ?? '' == 'Paris') { echo 'selected'; 	} ?>  value="Paris"  >Paris</option>
+                    <option <?php if ($_POST['city'] ?? '' == 'Grenoble') { echo 'selected'; 	} ?>  value="Grenoble"  >Grenoble</option>
+                    <option <?php if ($_POST['city'] ?? '' == 'Toulon') { echo 'selected'; 	} ?>  value="Toulon"  >Toulon</option>
                 </select>
             </div>
         </div>
@@ -108,17 +108,17 @@ include('__includes/02_nav.php');
                 <div class="form-group">
                     <label>Nombre de pièces :</label>
                     <select id="rooms" name="rooms" class="form-control">
-                        <option value="">--Sélectionnez--</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
+                        <option>--Sélectionnez--</option>
+                        <option <?php if ($_POST['rooms'] ?? '' == '1') { echo 'selected'; 	} ?> value="1">1</option>
+                        <option <?php if ($_POST['rooms'] ?? '' == '2') { echo 'selected'; 	} ?> value="2">2</option>
+                        <option <?php if ($_POST['rooms'] ?? '' == '3') { echo 'selected'; 	} ?> value="3">3</option>
+                        <option <?php if ($_POST['rooms'] ?? '' == '4') { echo 'selected'; 	} ?> value="4">4</option>
+                        <option <?php if ($_POST['rooms'] ?? '' == '5') { echo 'selected'; 	} ?> value="5">5</option>
+                        <option <?php if ($_POST['rooms'] ?? '' == '6') { echo 'selected'; 	} ?> value="6">6</option>
+                        <option <?php if ($_POST['rooms'] ?? '' == '7') { echo 'selected'; 	} ?> value="7">7</option>
+                        <option <?php if ($_POST['rooms'] ?? '' == '8') { echo 'selected'; 	} ?> value="8">8</option>
+                        <option <?php if ($_POST['rooms'] ?? '' == '9') { echo 'selected'; 	} ?> value="9">9</option>
+                        <option <?php if ($_POST['rooms'] ?? '' == '10') { echo 'selected'; 	} ?> value="10">10</option>
                     </select>
 
                 </div>
@@ -128,11 +128,11 @@ include('__includes/02_nav.php');
                 <div class="form-group">
                     <label>Salles de bains :</label>
                     <select id="baths" name="baths" class="form-control">
-                        <option value="">--Sélectionnez--</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
+                        <option>--Sélectionnez--</option>
+                        <option <?php if ($_POST['baths'] ?? '' == '1') { echo 'selected'; 	} ?> value="1">1</option>
+                        <option <?php if ($_POST['baths'] ?? '' == '2') { echo 'selected'; 	} ?> value="2">2</option>
+                        <option <?php if ($_POST['baths'] ?? '' == '3') { echo 'selected'; 	} ?> value="3">3</option>
+                        <option <?php if ($_POST['baths'] ?? '' == '4') { echo 'selected'; 	} ?> value="4">4</option>
                     </select>
 
                 </div>
@@ -142,10 +142,10 @@ include('__includes/02_nav.php');
                 <div class="form-group">
                     <label>Nombre d'étages :</label>
                     <select id="level" name="level" class="form-control">
-                        <option value="">--Sélectionnez--</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                        <option >--Sélectionnez--</option>
+                        <option <?php if ($_POST['level'] ?? '' == '1') { echo 'selected'; 	} ?> value="1">1</option>
+                        <option <?php if ($_POST['level'] ?? '' == '1') { echo 'selected'; 	} ?> value="2">2</option>
+                        <option <?php if ($_POST['level'] ?? '' == '1') { echo 'selected'; 	} ?> value="3">3</option>
                     </select>
 
                 </div>
@@ -202,7 +202,7 @@ include('__includes/02_nav.php');
                 <div class="col-sm-3">
                     <div class="form-group">
                         <div class="checkbox-container">
-                            <input type="checkbox" class="checkbox" id="parking" name="parking" value="1">
+                            <input type="checkbox" class="checkbox" id="parking" name="parking"  value="<?= $_POST["parking"] ?? ''; ?>">
                             <label for="parking"> Parking </label>
                         </div>
                     </div>
@@ -221,7 +221,7 @@ include('__includes/02_nav.php');
                 <div class="col-sm-3">
                     <div class="form-group">
                         <div class="checkbox-container">
-                            <input type="checkbox" class="checkbox" id="elevator" name="elevator" value="1">
+                            <input type="checkbox" class="checkbox" id="elevator" name="elevator"  value="<?= $_POST["elevator"] ?? ''; ?>">
                             <label for="elevator">Ascenseur </label>
                         </div>
                     </div>

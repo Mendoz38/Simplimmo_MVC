@@ -124,3 +124,5 @@ button > a {
 .proerty-th .proerty-item {
     min-height: 415px;
   }
+
+.login > a {outline:none}
