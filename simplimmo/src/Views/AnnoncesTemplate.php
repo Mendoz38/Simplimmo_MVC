@@ -148,8 +148,8 @@ include('__includes/02_nav.php');
 
                                             <select id="basic"  name="type"  class="selectpicker form-control">
                                                 <option> -Statut- </option>
-                                                <option>Location</option>
-                                                <option>Achat</option>
+                                                <option>Maison</option>
+                                                <option>Appartement</option>
 
                                             </select>
                                         </div>

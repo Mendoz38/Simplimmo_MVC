@@ -18,7 +18,6 @@ include('__includes/02_nav.php');
 <!-- register-area -->
 <div class="register-area">
     <div class="container">
-        <h2><?= $count; ?> users</h2>
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="box-for overflow">

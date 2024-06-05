@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="pull-left">
-                    <span> (C) <a href="#">SimplonTeam</a> , All rights reserved 2024 </span>
+                    <span> (CC) <a href="#">SimplonTeam</a> , No rights reserved 2024 </span>
                 </div>
                 <div class="bottom-menu pull-right">
                         <?php  

@@ -139,7 +139,7 @@ include('__includes/02_nav.php');
                         type: "POST",
                         url:  url, 
                         success: function(response) {
-            console.log("Réponse du serveur:", response);
+                        console.log("Réponse du serveur:", response);
                             if (response.success) {
                                 window.location.reload(); 
                             } else {

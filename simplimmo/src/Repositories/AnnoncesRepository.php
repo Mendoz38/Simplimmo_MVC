@@ -24,7 +24,7 @@ class AnnoncesRepository extends Database
         $req = $this->getDb()->prepare('DELETE FROM annonces WHERE id = :id');
         $req->bindParam(':id', $annonceId, PDO::PARAM_INT);
         return $req->execute();
-        
+    
     }
 
     public function getAllAnnonces()
@@ -43,6 +43,25 @@ class AnnoncesRepository extends Database
         return $data;
     }
 
+// En cours / non fonctionnel
+    public function searchAnnonces($searchData)
+    {
+        pr($searchData);
+        
+        $sql = "
+        SELECT *
+        FROM annonces a
+        LEFT JOIN house h ON a.id = h.id_annonce AND a.type = 'maison'
+        LEFT JOIN appartment ap ON a.id = ap.id_annonce AND a.type = 'appartment'
+        WHERE type = ''
+        ";
+
+        $stmt = $this->getDb()->query($sql);
+        $data = $stmt->fetchAll(PDO::FETCH_CLASS, Annonces::class);
+        //pr($data);
+        
+        return $data;
+    }
 
 
     public function getAnnonceById($id)
@@ -62,4 +81,7 @@ class AnnoncesRepository extends Database
         //pr($data);
         return $data;
     }
+
+    
+
 }

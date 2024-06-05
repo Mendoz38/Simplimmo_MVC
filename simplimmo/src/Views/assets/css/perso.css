@@ -60,14 +60,6 @@ button > a {
     display: flex;
     align-items: center;
 }
-@media (min-width: 768px) {
-    .form-inline .checkbox, .form-inline .radio {
-        display: none;
-      margin-top: 0;
-      margin-bottom: 0;
-      vertical-align: middle;
-    }
-  }
 
 
 .checkbox {
@@ -126,3 +118,19 @@ button > a {
   }
 
 .login > a {outline:none}
+
+@media (min-width: 768px) {
+    .form-inline .checkbox, .form-inline .radio {
+        display: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+
+    .properties-page .box-two {
+        display: flex;
+        flex-direction: column;
+      }
+
+
+  }

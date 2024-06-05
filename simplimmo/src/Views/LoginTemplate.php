@@ -40,7 +40,7 @@ include('__includes/02_nav.php');
                     }
 
                     if (empty($successMessage)) {
-                        echo $_SESSION['user_email'];
+                        echo $_SESSION['user_email'] ?? '';
                     ?>
                         <form action="" method="post">
                             <div class="form-group">

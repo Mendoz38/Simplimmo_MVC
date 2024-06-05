@@ -20,10 +20,34 @@ class AnnoncesController
 			'title' => $title,
             'count' => $count,
             'annonces' => $allAnnonces,
+            //'searchannonces' => $searchAnnonces,
         ];
         //pr($viewData);
         $this->render('AnnoncesTemplate', $viewData);
 
+        if ($_POST["search"] ?? '' == "search") {
+            $searchData=[
+                'price' => $_POST['price'] ?? '' ,
+                'type' => $_POST['type'] ?? ''
+            ];
+            
+            $searchAnnonces = $annoncesRepository->searchAnnonces($searchData);
+        } else {
+            $allAnnonces = $annoncesRepository->getAllAnnonces();
+            $searchAnnonces = $allAnnonces;
+        }
+        $count = $annoncesRepository->countAll();
+
+        $viewData = [
+            'title' => $title,
+            'count' => $count,
+            'annonces' => $searchAnnonces,
+        ];
+
+        $this->render('AnnoncesTemplate', $viewData);
+
+    
+        
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $title = $_POST['title'];
@@ -72,7 +96,7 @@ class AnnoncesController
 
             ];
 
-            pr($data);
+           // pr($data);
         } 
     }
 }
